@@ -1,0 +1,21 @@
+
+<p>
+1. Realizar un análisis FEAT de alto nivel (<strong>higher-level analysis</strong>) donde se promedie la activación de la primera condición A &gt; B (ej. música &gt; silencio) en todos los sujetos. En la pestaña de <strong>Post-stats</strong> se debe de seleccionar una máscara en el recuadro de <strong>Pre-threshold masking</strong>, esta máscara debe salir del resultado obtenido del análisis de alto nivel la segunda condición de interés
+C &gt; B (<strong>cluster_mask_zstat#.nii.gz</strong>).
+</p>
+
+<p>
+2. Realizar un análisis FEAT de alto nivel de la segunda condición  C &gt; B (ej. habla &gt; silencio). Se repiten los pasos del punto 1, para este análisis se escoge la máscara del contraste de la primera condición A &gt; B (<strong>cluster_mask_zstat#.nii.gz</strong>).
+</p>
+
+<p>
+3. Los dos análisis FEAT nos arrojarán las regiones en común, éstos serán muy similares pues en ambos casos la áreas de búsqueda se delimitan por el contraste opuesto:
+</p>
+
+<p>
+a)música &gt; silencio (delimitado por la máscara de habla &gt; silencio)
+</p>
+
+<p>
+b)habla &gt; silencio (delimitado por la máscara de música &gt; silencio)
+</p>

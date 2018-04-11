@@ -1,0 +1,49 @@
+1409678661	172.24.80.106	C	difusion	lconcha	creado	
+1409678966	172.24.80.106	E	difusion	lconcha		
+1409679163	172.24.80.106	E	difusion	lconcha	[Pre-procesamiento de datos] 	
+1409679194	172.24.80.106	E	difusion	lconcha	[Proceso básico] 	
+1409679254	172.24.80.106	E	difusion	lconcha		
+1424911912	172.24.80.99	E	difusion	rcruces		
+1424912369	172.24.80.99	E	difusion	rcruces		
+1424912516	172.24.80.99	E	difusion	rcruces		
+1424912720	172.24.80.99	E	difusion	rcruces		
+1424912905	172.24.80.99	E	difusion	rcruces		
+1424912982	172.24.80.99	E	difusion	rcruces		
+1424913014	172.24.80.99	E	difusion	rcruces		
+1424913170	172.24.80.99	E	difusion	rcruces		
+1424913191	172.24.80.99	E	difusion	rcruces		
+1424919348	172.24.80.99	E	difusion	rcruces		
+1424920497	172.24.80.99	E	difusion	rcruces		
+1424920687	172.24.80.99	E	difusion	rcruces		
+1424920819	172.24.80.99	E	difusion	rcruces		
+1424920932	172.24.80.99	E	difusion	rcruces		
+1424921084	172.24.80.99	E	difusion	rcruces		
+1424921109	172.24.80.99	E	difusion	rcruces		
+1424921128	172.24.80.99	E	difusion	rcruces		
+1424921144	172.24.80.99	E	difusion	rcruces		
+1424921185	172.24.80.99	E	difusion	rcruces		
+1424921235	172.24.80.99	E	difusion	rcruces	[Corrección de inhomogeneidades del campo magnético] 	
+1424921248	172.24.80.99	E	difusion	rcruces		
+1424922422	172.24.80.99	E	difusion	rcruces	[Ahora sí estamos listos para generar algunos mapas cuantitativos.] 	
+1424922439	172.24.80.99	E	difusion	rcruces	[¡¡¡Ahora sí estamos listos para generar algunos mapas cuantitativos!!!] 	
+1424922530	172.24.80.99	E	difusion	rcruces	[¡¡¡Ahora sí estamos listos para generar algunos mapas cuantitativos!!!] 	
+1424922556	172.24.80.99	E	difusion	rcruces	[Reacomodo de la tabla de gradientes para la compativilidad de mrtrix] 	
+1424922569	172.24.80.99	E	difusion	rcruces	[Reacomodo de la tabla de gradientes para la compativilidad de mrtrix] 	
+1424922651	172.24.80.99	E	difusion	rcruces	[Proceso con mrtrix 3] 	
+1424922696	172.24.80.99	E	difusion	rcruces	[Equivalencias de Comandos entre mrtrix2 y MRtrix3] 	
+1424922723	172.24.80.99	E	difusion	rcruces		
+1424922737	172.24.80.99	E	difusion	rcruces	[Proceso básico con mrtrix 2] 	
+1424933007	172.24.80.99	E	difusion	rcruces	[Conversion de directorios DICOM a imágenes Nifti] 	
+1424933035	172.24.80.99	E	difusion	rcruces	[Conversion de directorios DICOM a imágenes Nifti] 	
+1424933059	172.24.80.99	E	difusion	rcruces	[Conversion de directorios DICOM a imágenes Nifti] 	
+1424933089	172.24.80.99	E	difusion	rcruces	[Corrección de inhomogeneidades del campo magnético] 	
+1424981160	172.24.80.105	E	difusion	amjs		
+1424981209	172.24.80.105	E	difusion	amjs		
+1424981295	172.24.80.105	E	difusion	amjs	[Corrección de inhomogeneidades del campo magnético] 	
+1424981344	172.24.80.105	E	difusion	amjs	[Corrección de inhomogeneidades del campo magnético] 	
+1424988161	172.24.80.109	E	difusion	guadalupe		
+1425486480	172.24.80.106	E	difusion	lconcha	[Reacomodo de la tabla de gradientes para la compativilidad de mrtrix] 	
+1427323313	172.24.80.106	E	difusion	lconcha	[Proceso con MRtrix 3] 	
+1427391946	172.24.80.109	E	difusion	guadalupe		
+1427394556	172.24.80.109	E	difusion	guadalupe		
+1427394625	172.24.80.109	E	difusion	guadalupe	[Tractografía] 	

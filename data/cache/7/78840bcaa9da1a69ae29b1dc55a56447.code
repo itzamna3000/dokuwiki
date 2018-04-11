@@ -1,0 +1,18 @@
+flirt <span class="re5">-in</span> <span class="re1">$flair</span> <span class="re5">-ref</span> <span class="re1">$t1</span> <span class="re5">-omat</span> flair_to_t1.mat <span class="re5">-out</span> flair_to_t1.nii.gz <span class="re5">-dof</span> <span class="nu0">6</span><span class="sy0">&lt;</span>code<span class="sy0">&gt;</span>
+&nbsp;
+El switch <span class="st_h">''</span><span class="re5">-dof</span> <span class="nu0">6</span><span class="st_h">''</span> indica el número de grados de libertad para la transformación lineal, en este caso <span class="nu0">6</span> <span class="br0">&#40;</span>tres rotaciones + <span class="nu0">3</span> traslaciones<span class="br0">&#41;</span>.
+&nbsp;
+El archivo <span class="st_h">''</span>flair_to_t1.mat<span class="st_h">''</span> contendrá la matriz de transformación lineal necesaria para hacer que <span class="sy0">**</span><span class="re1">$flair</span><span class="sy0">**</span> se parezca a <span class="sy0">**</span>t1<span class="sy0">**</span>, mientras que el archivo <span class="st_h">''</span>flair_to_t1.nii.gz<span class="st_h">''</span> tendrá la imagen modificada en espacio y resolución de <span class="sy0">**</span>t1<span class="sy0">**</span>. Nota que no es necesario hacer la imagen, pues a veces nos interesa simplemente la matriz de transformación para aplicársela a otra imagen <span class="br0">&#40;</span>como por ejemplo un ROI<span class="br0">&#41;</span>.
+&nbsp;
+Una vez que termina <span class="br0">&#40;</span>tarda unos <span class="nu0">3</span> min<span class="br0">&#41;</span>, podemos ver ambas imágenes al mismo tiempo en fslview:
+&nbsp;
+  fslview <span class="re1">$t1</span> flair_to_t1.nii.gz
+&nbsp;
+Si vemos el contenido de flair_to_t1.mat, encontramos:
+&nbsp;
+<span class="sy0">&lt;</span>code<span class="sy0">&gt;</span>
+$ <span class="kw2">cat</span> flair_to_t1.mat \\
+<span class="nu0">0.999675</span>  <span class="nu0">0.018268</span>  <span class="nu0">0.0177599</span>  -<span class="nu0">5.71865</span>  \\
+-<span class="nu0">0.0181734</span>  <span class="nu0">0.99982</span>  -<span class="nu0">0.00547362</span>  <span class="nu0">4.97206</span>  \\
+-<span class="nu0">0.0178567</span>  <span class="nu0">0.00514908</span>  <span class="nu0">0.999827</span>  <span class="nu0">5.25172</span>  \\
+<span class="nu0">0</span>  <span class="nu0">0</span>  <span class="nu0">0</span>  <span class="nu0">1</span>

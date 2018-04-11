@@ -1,0 +1,102 @@
+
+<p>
+En esta página se describen los errores clásicos del cluster.
+</p>
+
+<h1 class="sectionedit1" id="como_saber_que_hubo_un_error">Cómo saber que hubo un error</h1>
+<div class="level1">
+
+<p>
+Supongamos que acabamos de mandar un job, ya sea con <code>fsl_sub</code> o a través de alguna interface gráfica, como por ejemplo Feat. La pregunta es: está corriendo mi job? La respuesta es fácil de encontrar:
+</p>
+<pre class="code">qstat</pre>
+
+<p>
+Nos regresa algo como lo siguiente:
+</p>
+<pre class="code">job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+   4008 0.29506 feat5_stop federica     Eqw   08/18/2014 14:22:16                                    1        
+   3308 0.00000 feat3_film federica     hqw   08/14/2014 12:17:19 
+   3973 0.00000 feat5_stop federica       r   08/18/2014 14:16:12                                    1        </pre>
+
+<p>
+Revisemos lo que significa: <code>job-ID</code> es el <em>ticket</em> que tiene nuestro trabajo en la cola. <code>prior</code> es la prioridad del trabajo, que la asigna el propio sistema del cluster. <code>name</code> es el nombre del trabajo (recuerda que con <code>fsl_sub -N &lt;nombre&gt;</code> puedes asignarlo. En caso de interfaces gráficas como Feat, el mismo programa se encarga de darle nombre. <code>user</code> es el dueño del job, y al final tenemos <code>submit/start at</code>, que nos dice cuando mandamos el job y cuándo empezó a ejecutar. Ahora, el más importante es <code>state</code>. En este ejemplo tenemos tres diferentes estados:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>Eqw</code>. Significa que hubo un error. Este job no va a ejecutarse hasta que se solucione el problema que causó el error.</div>
+</li>
+<li class="level1"><div class="li"> <code>hqw</code>  Este job tiene un <em>hold</em>, es decir, que no va a correr sino hasta que un job, probablemente un pre-requisito para este job, termine. Por ejemplo, los post-stats de Feat no pueden correr si no ha corrido stats. Este no es un error.</div>
+</li>
+<li class="level1"><div class="li"> <code>r</code> Este job está corriendo. </div>
+</li>
+</ul>
+
+<p>
+Para saber qué pasó con un job en estado <code>Eqw</code>, podemos ejecutar:
+</p>
+<pre class="code">qstat -j &lt;job-id&gt;</pre>
+
+<p>
+Por ejemplo, el job-id 4008 está en estado de error. Ejecutar <code>qstat -j 4008</code> regresa mucho texto, pero lo más importante está al final:
+</p>
+<pre class="code">script_file:                /home/inb/lconcha/fmrilab_software/fsl_5.0.6/bin/feat
+jid_predecessor_list (req):  4007
+error reason    1:          08/18/2014 14:30:39 [1035:32278]: error: can&#039;t chdir to /datos/tournoux/federica/detanner/gaze/sujet
+scheduling info:            queue instance &quot;all.q@hahn.inb.unam.mx&quot; dropped because it is disabled
+                            queue instance &quot;all.q@neurona.inb.unam.mx&quot; dropped because it is disabled
+                            queue instance &quot;high.q@hahn.inb.unam.mx&quot; dropped because it is disabled
+                            queue instance &quot;high.q@neurona.inb.unam.mx&quot; dropped because it is disabled
+                            queue instance &quot;low.q@hahn.inb.unam.mx&quot; dropped because it is disabled
+                            queue instance &quot;low.q@neurona.inb.unam.mx&quot; dropped because it is disabled
+                            Job is in error state
+</pre>
+
+<p>
+Aquí lo crucial es <code>error reason 1 </code>, y <code>can chdir to /datos/tournoux…</code>. Esto significa que la carpeta donde tiene que escribir el script (en este caso feat), no está accesible. En efecto, este es el error más común, y hay dos razones para ésto.
+</p>
+
+<p>
+La primer razón es causada por el usuario, al tratar de escribir en una carpeta no existente o en la que no tiene permisos de escritura. Esto sucede, por ejemplo, si el usuario <code>usuarioA</code>, en una terminal, está colocado en la carpeta <code>/home/inb/<em class="u">usuarioX</em></code>, en la cual, por defecto, no tiene permisos de escritura, y ahí ejecuta algún <code>fsl_sub</code>. Los logs que genera <code>fsl_sub</code> no podrán ser escritos en la carpeta actual. La solución es cambiar de carpeta.
+</p>
+
+<p>
+La segunda razón es culpa del sistema de archivos NFS, que es el que permite que las computadoras compartan sus discos duros en la red de nuestro cluster. Para diagnosticar este problema, ejecutamos el siguiente escript:
+</p>
+<pre class="code">inb_cluster_NFS_status_simple.sh</pre>
+
+<p>
+Un output de este escript es como:
+</p>
+<pre class="code">arwen   ............OK
+fourier 	...........OK
+penfield 	............OK
+stejskal 	.............OK
+tanner 	............OK
+tournoux 	............OK
+mendel 	............OK
+rhesus 	ERROR: rhesus.inb.unam.mx is DOWN!
+lauterbur 	lconcha@lauterbur.inb.unam.mx&#039;s password: 
+Could not chdir to home directory /home/inb/lconcha: No such file or directory
+bash: /home/inb/lconcha/fmrilab_software/tools/fmrilab_check_NFS.sh: No such file or directory
+bloch 	............OK
+mansfield 	............OK
+hahn 	............OK
+purcell 	............OK
+neurona 	.............OK
+</pre>
+
+<p>
+Vemos cómo el script pasa por todas las computadoras y revisa que cada uno de los sistemas de archivos estén bien montados en /datos. Si todo está bien, la computadora marca <code>OK</code>. Todo lo demás indica errores. En este caso, <code>lauterbur</code> no tiene montados los <code>homes</code>, así que ningún script va a correr en lauterbur. En otros casos este script nos dirá que algún directorio <code>/datos</code> está mal montado.  Vemos también que <code>rhesus</code> no está prendida. Afortunadamente, el cluster deshabilita a las computadoras caídas para que no les lleguen jobs, así que esto no debe ser un problema mayor.
+</p>
+
+<p>
+En caso de que este script marque errores, <em>el usuario no puede corregir el problema</em> así que se recomienda comunicarse con el administrador del sistema (Luis, o Leopoldo, por ahora).
+</p>
+
+<p>
+<strong>Nota</strong>: en caso de utilizar mucho el scrip <em>inb_cluster_NFS_status_simple.sh</em> se recomienda revisar el siguiente enlaze: <a href="/dokuwiki/doku.php?id=keygen" class="wikilink1" title="keygen">ssh-keygen</a>.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Cómo saber que hubo un error" [66-] -->

@@ -1,0 +1,81 @@
+
+<h1 class="sectionedit1" id="awk">AWK</h1>
+<div class="level1">
+
+<p>
+AWK es un lenguaje de programación diseñado para procesar datos basados en texto, ya sean ficheros o flujos de datos.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "AWK" [1-138] -->
+<h2 class="sectionedit2" id="estructura_de_awk">Estructura de awk</h2>
+<div class="level2">
+
+<p>
+<strong>awk</strong> bla bla bla bla bla pendiente
+</p>
+
+<p>
+blablablabla blablablabla
+</p>
+<pre class="code"> awk bla bla bla BEGIN END print </pre>
+
+</div>
+<!-- EDIT2 SECTION "Estructura de awk" [139-284] -->
+<h2 class="sectionedit3" id="declarar_variables_de_bash_dentro_de_awk">Declarar variables de BASH dentro de awk</h2>
+<div class="level2">
+
+<p>
+awk -v d=INICIO &#039;{print d ” ” $0}&#039;
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Declarar variables de BASH dentro de awk" [285-373] -->
+<h2 class="sectionedit4" id="redireccionar_valores_generados_por_awk">Redireccionar valores generados por awk</h2>
+<div class="level2">
+
+<p>
+Declarar las variables de BASH A awk
+</p>
+
+<p>
+<strong>awk</strong> bla bla bla bla bla pendiente
+</p>
+<pre class="code">Td=`fslstats_rois $t2m $labels $Tal_DER &quot;-M -S -P 50 -m -s -V&quot;`
+  Tdmean=$(awk &#039;{print $1}&#039; &lt;&lt;&lt; &quot;$Td&quot;)</pre>
+
+</div>
+<!-- EDIT4 SECTION "Redireccionar valores generados por awk" [374-621] -->
+<h2 class="sectionedit5" id="agregar_variables_al_principio_o_al_finalde_una_fila">Agregar variables al PRINCIPIO o al FINALde una fila</h2>
+<div class="level2">
+
+<p>
+Al <strong>final</strong>
+</p>
+<pre class="code"> awk -v d=$dir &#039;{print d &quot; &quot; $0}&#039; tmp_struct0.txt &gt; tmp.txt </pre>
+
+<p>
+Al <strong>principio</strong>
+</p>
+<pre class="code"> awk -v d=$dir &#039;{print d $0 &quot; &quot;}&#039; tmp_struct0.txt &gt; tmp.txt </pre>
+
+</div>
+<!-- EDIT5 SECTION "Agregar variables al PRINCIPIO o al FINALde una fila" [622-866] -->
+<h2 class="sectionedit6" id="seleccion_de_elementos_filas_y_columnas">Selección de elementos, filas y columnas</h2>
+<div class="level2">
+
+<p>
+Cuando se quiere <a href="/dokuwiki/doku.php?id=awk_selec" class="wikilink1" title="awk_selec">seleccionar</a> un elemento de un archivo con varias columnas y filas (.csv .txt etc) <strong>awk</strong> permite hacerlo. y puede ser una fila, una columna o varias, o un solo elemento.
+</p>
+
+</div>
+<!-- EDIT6 SECTION "Selección de elementos, filas y columnas" [867-1123] -->
+<h2 class="sectionedit7" id="operaciones_arimeticas_con_variables_de_coma_flotante">Operaciones ariméticas con variables de coma flotante</h2>
+<div class="level2">
+
+<p>
+Bash no puede realizar operaciones <a href="/dokuwiki/doku.php?id=awk_arimet" class="wikilink1" title="awk_arimet">ariméticas</a> con números con decimales, sin embargo, awk, si logra multiplicar, dividir, sumar y restar estos valores.
+</p>
+
+</div>
+<!-- EDIT7 SECTION "Operaciones ariméticas con variables de coma flotante" [1124-] -->

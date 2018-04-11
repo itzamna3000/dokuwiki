@@ -1,0 +1,5 @@
+flirt \
+  <span class="re5">-in</span> <span class="co1">${tmpDir}</span><span class="sy0">/</span>Fast_t1_pve_0 \
+  <span class="re5">-ref</span> <span class="re1">$adc</span> \
+  <span class="re5">-omat</span> <span class="co1">${outbase}</span>_lin.mat \
+  <span class="re5">-out</span> <span class="co1">${tmpDir}</span><span class="sy0">/</span>lin_csf2adc_transformed 

@@ -1,0 +1,48 @@
+
+<h2 class="sectionedit2" id="uso_del_cluster">Uso del clúster</h2>
+
+<p>Como usuarios del clúster es necesario considerar varios factores para una
+buena ejecución de los trabajos que enviamos. La localización de los <a href="?id=datoscluster">datos en
+el clúster</a> los <a href="?id=permisos">permisos</a> y el estado de las
+colas de ejecución del clúster. Para esto ultimo se pueden usar los siguientes
+comandos:</p>
+
+<pre><code>qstat -f
+</code></pre>
+
+<p>Permite ver los trabajos en una lista de hosts con los slot's en uso<br><strong>locales/clúster/disponibles</strong>.</p>
+
+<pre><code>qstat -u '*'
+</code></pre>
+
+<p>Permite ver todos los trabajos de todos los usuarios en ejecución</p>
+
+<pre><code>qstat
+</code></pre>
+
+<p>Por si sólo muestra los trabajos del usuario que lo ejecuta</p>
+
+<pre><code>qdel #
+</code></pre>
+
+<p>Permite borrar trabajos de la cola de ejecución, en este caso # se sustituye
+por el número del trabajo que se quiere eliminar</p>
+
+<pre><code>qdel -u usuario
+</code></pre>
+
+<p>Borra todos los trabajos del usuario.</p>
+
+<h4 class="sectionedit4" id="salir_del_cluster1">Salir del clúster<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h4>
+
+<p>Para correr trabajos de fsl en la máquina de manera local sin entrar al clúster
+se puede usar el comando:</p>
+
+<p>set unexport FSL_PARALELL</p>
+
+<div class="footnotes">
+<hr><ol><li id="fn:1">
+<p>Salir en este caso se refiere a que el uso de programas se hara de forma local sin mandarlos al clúster. Sin embargo el equipo seguira formando parte del clúster <a href="#fnref:1" rev="footnote">↩</a></p>
+</li>
+
+</ol></div></html>

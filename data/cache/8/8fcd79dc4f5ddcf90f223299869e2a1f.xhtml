@@ -1,0 +1,41 @@
+
+<h2 class="sectionedit2" id="comprimir">Comprimir</h2>
+
+<p>Comprimir los archivos <a href="http://es.wikipedia.org/wiki/DICOM"><strong><abbr title="Digital Imaging and Communication in Medicine">DICOM</abbr></strong></a>, reduce dramaticamente el uso de espacio de disco, por lo que es una practica recomendable. Además depende de una instrucción sencilla.</p>
+
+<p>Para comprimir un directorio se usa:</p>
+
+<pre><code>tar cvzf archivo.tar.gz /archivo/*
+</code></pre>
+
+<p>Para extraer el contenido se utiliza:</p>
+
+<pre><code>tar xvzf archivo.tar.gz
+</code></pre>
+
+<p>Para listar el contenido sin extraer:</p>
+
+<pre><code>tar tvzf archivo.tar.gz
+</code></pre>
+
+<dl><dt>f</dt>
+<dd>indica el nombre del archivo</dd>
+
+<dt>z</dt>
+<dd>indica que va comprimir con gzip el archivo</dd>
+
+<dt>j</dt>
+<dd>cuando se usa, indica el uzo de bzip que tiene una tasa mayor de compresión pero tarda mas y consume mas recursos</dd>
+
+<dt>v</dt>
+<dd>permite ver los avisos del proceso</dd>
+
+<dt>c</dt>
+<dd>indica que se creara una archivo comprimido</dd>
+
+<dt>x</dt>
+<dd>indica que se descomprime el archivo</dd>
+
+<dt>t</dt>
+<dd>genera un listado de los archivos que lo forman</dd>
+</dl></html>

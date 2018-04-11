@@ -1,0 +1,68 @@
+
+<p>
+Cómo evaluar el calibre de axones.
+</p>
+
+<p>
+Esto se logra a partir de histología. En este ejemplo, trabajaremos con una imagen con tinción de azul de toluidina, con un grosor de 1 micra, y con un aumento de 100X. Esta imagen es cortesía del Dr. Larriva, y se trata de un nervio óptico de rata, cortado de manera perpendicular al eje longitudinal de los axones.
+</p>
+
+<p>
+La imagen original está en tif. La que se anexa aquí está en png por requisitos del dokuwiki. 
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=n_opt.png" class="media" title="n_opt.png"><img src="/dokuwiki/lib/exe/fetch.php?w=100&amp;tok=a309e7&amp;media=n_opt.png" class="media" alt="" width="100" /></a>
+</p>
+
+<p>
+Lo primero que hice fue convertirlo a escala de grises desde la línea de comandos utilizando imagemagick
+</p>
+
+<p>
+<code>convert n_opt.png -colorspace gray n_opt_grayscale.png</code>
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=n_opt_grayscale.png" class="media" title="n_opt_grayscale.png"><img src="/dokuwiki/lib/exe/fetch.php?w=100&amp;tok=6f4341&amp;media=n_opt_grayscale.png" class="media" alt="" width="100" /></a>
+</p>
+
+<p>
+Ahora abrimos ImageJ (versión 1.51j8).
+(Hay que instalar los plugins <a href="https://imagescience.org/meijering/software/featurej/" class="urlextern" title="https://imagescience.org/meijering/software/featurej/"  rel="nofollow">FeatureJ</a> y <a href="http://example.com" class="urlextern" title="http://example.com"  rel="nofollow">CLAHE</a> y reiniciarlo la primera vez)
+</p>
+
+<p>
+Abrimos la imagen en escala de grises. 
+</p>
+
+<p>
+Ahora corremos el algoritmo CLAHE dos veces. Está en Plugins-CLAHE. Usamos los defaults (blocksize=127, histogram bins=256, max slope=3.0). La imagen queda mucho más homogénea.
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=n_opt_grayscale_clahex2.png" class="media" title="n_opt_grayscale_clahex2.png"><img src="/dokuwiki/lib/exe/fetch.php?w=100&amp;tok=7284e0&amp;media=n_opt_grayscale_clahex2.png" class="media" alt="" width="100" /></a>
+</p>
+
+<p>
+Tenemos que encontrar un umbral que separe membranas/mielina del resto de la imagen. Para esto, vamos a Image-Adjust-Auto local threshold. Seleccionamos el método Bernsen con radio=15 y dejamos seleccionado White objects on black bacground. Nota: He probado solo parcialmente los otros métodos, y éste ha dado buen resultado, aunque no descarto que otro pueda ser mejor.
+</p>
+
+<p>
+La imagen quedará binarizada. 
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=n_opt_grayscale_clahex2_bin.png" class="media" title="n_opt_grayscale_clahex2_bin.png"><img src="/dokuwiki/lib/exe/fetch.php?w=100&amp;tok=cee1ed&amp;media=n_opt_grayscale_clahex2_bin.png" class="media" alt="" width="100" /></a>
+</p>
+
+<p>
+Ahora sí ya solo queda encontrar los axones. Usaremos Analyze-Analyze particles.
+En Circularity seleccionamos 0.5-1, lo que hace al algoritmo buscar partículas semi o casi ciruclares, e ignorar cosas lineales. Aquí debemos tener cuidado cuando tengamos un corte no perfectamente perpendicular a los axones. Además, debemos jugar un poco con el tamaño de la partícula, que aquí está de cero a infinito. Quizás con ésto podemos controlar más el algoritmo, y/o dividir los axones chicos de los grandes. Esto y las estadísticas están mejor si tenemos claro las dimensiones de cada pixel en micras y se lo decimos a <a href="/dokuwiki/doku.php?id=imagej_dimensions" class="wikilink1" title="imagej_dimensions">imageJ</a>. 
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=analyze_particles_003.png" class="media" title="analyze_particles_003.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;tok=d8dd36&amp;media=analyze_particles_003.png" class="media" alt="" width="200" /></a>
+</p>
+
+<p>
+El resultado son los perfiles del lúmen de los axones, y una tabla donde se resumen sus áreas.
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=como_evaluar_calibre_de_axones&amp;media=resultado_analyzeparticles.png" class="media" title="resultado_analyzeparticles.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;tok=3669b8&amp;media=resultado_analyzeparticles.png" class="media" alt="" width="200" /></a>
+</p>

@@ -1,0 +1,64 @@
+
+<h2 class="sectionedit1" id="descomprimir_los_archivos">1. Descomprimir los archivos</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Entrar al directorio dónde se encuentran las imagenes:  </div>
+</li>
+</ul>
+<pre class="code"> cd datos/purcell/juan/mis_niftis/ </pre>
+<ul>
+<li class="level1"><div class="li"> Usar el comando <strong>tar</strong> con la opcion <strong>xvf</strong> para descomprimir. (x-extract, f-file, v-verbose)  </div>
+</li>
+</ul>
+<pre class="code"> tar xfv sujeto_00.nii.gz </pre>
+<ul>
+<li class="level1"><div class="li"> Si es un archivo <strong>rar</strong> usar el siguiente comando:  </div>
+</li>
+</ul>
+<pre class="code"> unrar x archivo.rar </pre>
+
+</div>
+<!-- EDIT1 SECTION "1. Descomprimir los archivos" [1-400] -->
+<h2 class="sectionedit2" id="transformar_los_archivos_dicom_o_par_rec_a_nifti">2. Transformar los archivos DICOM o PAR/REC a NIFTI</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT2 SECTION "2. Transformar los archivos DICOM o PAR/REC a NIFTI" [401-466] -->
+<h3 class="sectionedit3" id="dicoms">DICOMS</h3>
+<div class="level3">
+
+<p>
+Si es un directorio de dicoms hay que utilizar el siguiente comando:  
+</p>
+<pre class="code"> inb_dcm2nii.sh nombre_del_directorio/ nombre_nifti.nii.gz -1 -reorientar</pre>
+
+<p>
+Para más información teclear en una terminal inb_dcm2nii.sh.  
+</p>
+
+</div>
+<!-- EDIT3 SECTION "DICOMS" [467-712] -->
+<h3 class="sectionedit4" id="par_rec">PAR / REC</h3>
+<div class="level3">
+
+<p>
+En caso de que sea un archivo .PAR con .REC hay que usar los siguientes comandos; primero se transforma nifti:  
+</p>
+<pre class="code"> PARconv_v1.12.sh Archivo.PAR nombre_nuevo.nii.gz -f </pre>
+
+<p>
+la opción -f convierte los datos a puntos flotantes de 32 bit.  
+</p>
+
+<p>
+Posteriormente hay que reorientar el archivo nuevo al espacio estandar: 
+</p>
+<pre class="code"> fslreorient2std mi_nifti.nii.gz mi_nifti_reofientado.nii.gz </pre>
+
+<p>
+En caso de las imágenes <strong>pseudoflair</strong> hay que utilizar el siguiente comando en lugar de PARconv_v1.12.sh. sin la extension .PAR o .REC, solo el nombre: ej. ID_pseudoFLAIR.PAR
+</p>
+<pre class="code"> dcm2nii -o . -v N ID_pseuFLAIR</pre>
+
+</div>
+<!-- EDIT4 SECTION "PAR / REC" [713-] -->

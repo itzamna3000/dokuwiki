@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://172.24.80.100/dokuwiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://172.24.80.100/dokuwiki/feed.php">
+        <title>fMRILAB Dokuwiki</title>
+        <description></description>
+        <link>http://172.24.80.100/dokuwiki/</link>
+        <image rdf:resource="http://172.24.80.100/dokuwiki/lib/tpl/dokuwiki/images/favicon.ico" />
+       <dc:date>2015-04-08T16:05:34-05:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=1.data&amp;rev=1424979461&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=2.pre-stats&amp;rev=1424979552&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=3.stats&amp;rev=1424980099&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=4.registration&amp;rev=1424980443&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=analisis_de_alto_nivel&amp;rev=1425326272&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=archivos_dentro_de_una_carpeta_feat&amp;rev=1424980934&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=bash&amp;rev=1425661922&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=bashavd&amp;rev=1424932896&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=basicos&amp;rev=1424931510&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=bioinfo&amp;rev=1407433732&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=brain_extraction_tool_bet&amp;rev=1424979321&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=cambio_de_la_senal_bold&amp;rev=1425328063&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=cluster&amp;rev=1408636546&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=comandos&amp;rev=1424926650&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=comprimir&amp;rev=1407433732&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=comprimir_y_trasladar_imagenes&amp;rev=1424975410&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=datos&amp;rev=1407433732&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=datoscluster&amp;rev=1407433733&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=de_dicom_a_nifti&amp;rev=1424978369&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=de_parrec_a_nifti&amp;rev=1424978697&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=descomprimir_imagenes_y_transformarlas_de_formato_dicom_a_formato_niifti&amp;rev=1424976064&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=difusion&amp;rev=1427394625&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=eddy_correct_revpe&amp;rev=1424912332&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=enganar&amp;rev=1424980130&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=enlaces&amp;rev=1424918188&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=errorescluster&amp;rev=1424973677&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=faq&amp;rev=1427394827&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=feat&amp;rev=1424976433&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=feat2fs&amp;rev=1415037069&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=feat_render_highres&amp;rev=1424933492&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=fmri&amp;rev=1425328347&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=for&amp;rev=1424930203&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=fsl&amp;rev=1424988380&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=fslroi&amp;rev=1424922357&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=fslstats&amp;rev=1424975358&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=gestion&amp;rev=1424932425&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=grosorcortical&amp;rev=1427422774&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=herramienta_feat&amp;rev=1424978803&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=home&amp;rev=1407433732&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=image&amp;rev=1424986979&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=inicio&amp;rev=1426785775&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=keygen&amp;rev=1424928609&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=kill&amp;rev=1424932946&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=lconcha_tricks&amp;rev=1424918269&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=mrtrix3&amp;rev=1427323380&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=opciones&amp;rev=1425326106&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=permisos&amp;rev=1424927872&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=rederhighres&amp;rev=1424930192&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=regiones_en_comun&amp;rev=1425328724&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=registerdwi&amp;rev=1424976486&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=registration&amp;rev=1424966940&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=reorientar_imagenes&amp;rev=1424988084&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=respaldohome&amp;rev=1407433732&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=servido&amp;rev=1424924268&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=servidorgit&amp;rev=1408670998&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=ssh&amp;rev=1424930931&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=start&amp;rev=1424930627&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=temporal&amp;rev=1422981584&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=tricks&amp;rev=1422982555&amp;do=diff"/>
+                <rdf:li rdf:resource="http://172.24.80.100/dokuwiki/doku.php?id=vectores&amp;rev=1424913389&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://172.24.80.100/dokuwiki/lib/tpl/dokuwiki/images/favicon.ico">
+        <title>fMRILAB Dokuwiki</title>
+        <link>http://172.24.80.100/dokuwiki/</link>
+        <url>http://172.24.80.100/dokuwiki/lib/tpl/dokuwiki/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=1.data&amp;rev=1424979461&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:37:41-05:00</dc:date>
+        <title>1.data</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=1.data&amp;rev=1424979461&amp;do=diff</link>
+        <description>Pulsar el botón Select 4D data para seleccionar el archivo en formato NIFTI ya reorientado con las imágenes funcionales.
+
+Output directory: seleccionar la carpeta de destino.
+
+Colocar el TR usado durante la adquisición.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=2.pre-stats&amp;rev=1424979552&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:39:12-05:00</dc:date>
+        <title>2.pre-stats</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=2.pre-stats&amp;rev=1424979552&amp;do=diff</link>
+        <description>Slice timing correction: pulsar el botón y elegir el modo en que fueron adquiridas las imágenes.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=3.stats&amp;rev=1424980099&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:48:19-05:00</dc:date>
+        <title>3.stats</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=3.stats&amp;rev=1424980099&amp;do=diff</link>
+        <description>Activar opción Add motion parameters to model
+
+Pulsar el botón Full model setup
+
+	* EVs
+En la opción Number of original Evs colocar el número de bloques.
+En la opción EV name colocar el nombre designado a cada bloque.
+En la opción Basic shape: elegir Custom (3 column format). Se desplegará la opción para elegir el archivo .times convertido de eprime.
+	* Contrasts &amp; F-tests</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=4.registration&amp;rev=1424980443&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:54:03-05:00</dc:date>
+        <title>4.registration</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=4.registration&amp;rev=1424980443&amp;do=diff</link>
+        <description>Activar la opción Main structural image. Elegir el archivo de la imagen anatómica en formato NIFTI y reorientado.
+
+Después de esto se generará una carpeta con la extensión .feat que es el resultado final.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=analisis_de_alto_nivel&amp;rev=1425326272&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-02T13:57:52-05:00</dc:date>
+        <title>analisis_de_alto_nivel</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=analisis_de_alto_nivel&amp;rev=1425326272&amp;do=diff</link>
+        <description>Los análisis de alto nivel se dividen en dos tipos: segundo y tercer nivel. Los análisis de segundo nivel incluyen, por ejemplo, contrastes en un mismo sujeto (utilizando sus diferentes COPES), mientras que los análisis de tercer nivel constituyen el promedio de un grupo de sujetos en una condición o contraste particular (directorios FEAT).</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=archivos_dentro_de_una_carpeta_feat&amp;rev=1424980934&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T14:02:14-05:00</dc:date>
+        <title>archivos_dentro_de_una_carpeta_feat</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=archivos_dentro_de_una_carpeta_feat&amp;rev=1424980934&amp;do=diff</link>
+        <description>Carpetas
+
+Custom_timing_files
+
+En esta carpeta se encuentran tus archivos .times, con el nombre ev#.tx. El número se relaciona con el orden en que fueron ingresados.
+
+logs
+
+Aquí se encuentran archivos que indican qué hizo fsl para realizar el analisis FEAT.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=bash&amp;rev=1425661922&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-06T11:12:02-05:00</dc:date>
+        <title>bash</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=bash&amp;rev=1425661922&amp;do=diff</link>
+        <description>HOME: ¿Qué es y cómo se usa?
+
+En esta sección se mencionan las mejores prácticas para el uso de home en un sistema NFS, el uso de la carpeta Carpeta temporal, cómo se realiza el Respaldo de Home y el respaldo de los datos
+en general.
+
+Grupo de BioInformática (BIOINFO)
+
+El grupo de Bioinfomática cuenta con un grupo particular de aplicaciones y variables de entorno específicas que se detallan en este apartado.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=bashavd&amp;rev=1424932896&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:41:36-05:00</dc:date>
+        <title>bashavd</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=bashavd&amp;rev=1424932896&amp;do=diff</link>
+        <description>Permisos
+
+Los permisos de archivos determinan los usuarios que pueden interactuar con
+éstos. Quién puede modificar, borrar o mover los mismos.
+
+Comprimir
+
+Compresión: sirve para disminuir el tamaño de los archivos que se manejan en el clúster se puede utilizar el formato TAR comprimido por gzip.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=basicos&amp;rev=1424931510&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:18:30-05:00</dc:date>
+        <title>basicos</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=basicos&amp;rev=1424931510&amp;do=diff</link>
+        <description>Si te interesa, aquí hay una lista más amplia. 
+manrmdir</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=bioinfo&amp;rev=1407433732&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:52-05:00</dc:date>
+        <title>bioinfo</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=bioinfo&amp;rev=1407433732&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=brain_extraction_tool_bet&amp;rev=1424979321&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:35:21-05:00</dc:date>
+        <title>brain_extraction_tool_bet</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=brain_extraction_tool_bet&amp;rev=1424979321&amp;do=diff</link>
+        <description>Elimina de las imágenes aquellas estructuras que rodean al cerebro (cráneo y meninges):
+
+	*  Se escribe la ruta en donde se encuentra el archivo.
+	*  Se pone el comando “bet”
+	*  Se escribe el nombre del archivo con formato “.nii.gz”
+	*  Se pone el nuevo nombre del archivo.
+	*  Se escribe el grado de extracción que se desea, usualmente funciona con “-f 0.5”, pero el gradiente va desde 0 a 1, siendo los valores cercanos a 0 los más laxos, y los cercanos a 1 los de mayor extracción.…</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=cambio_de_la_senal_bold&amp;rev=1425328063&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-02T14:27:43-05:00</dc:date>
+        <title>cambio_de_la_senal_bold</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=cambio_de_la_senal_bold&amp;rev=1425328063&amp;do=diff</link>
+        <description>1.Abrir FEATQuery desde la terminal:   arafat@tanner:~$ Featquery o abrirlo desde la interfaz de FSL (Misc)
+
+2.Ingresa el número y la ruta de los directorios FEATs (promedios o contrastes) en el recuadro de Number of FEAT directories.  Se puede elegir un sólo sujeto o un promedio de varios los sujetos, la diferencia será que en la lista final, en el primer caso, cada línea será un punto temporal en el que se evalúa la respuesta hemodinámica (en el mismo sujeto), mientras que para el análisis de …</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=cluster&amp;rev=1408636546&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-21T10:55:46-05:00</dc:date>
+        <title>cluster</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=cluster&amp;rev=1408636546&amp;do=diff</link>
+        <description>11</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=comandos&amp;rev=1424926650&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T22:57:30-05:00</dc:date>
+        <title>comandos</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=comandos&amp;rev=1424926650&amp;do=diff</link>
+        <description>&lt;markdonw&gt;
+## [Comprimir](?id=comprimir)
+
+Para disminuir el tamaño de los archivos que se manejan en el clúster se puede utilizar el formato TAR comprimido por gzip
+
+## [Matar procesos](?id=kill)
+Procedimientos necesarios para terminar comandos en ejecución.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=comprimir&amp;rev=1407433732&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:52-05:00</dc:date>
+        <title>comprimir</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=comprimir&amp;rev=1407433732&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=comprimir_y_trasladar_imagenes&amp;rev=1424975410&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:30:10-05:00</dc:date>
+        <title>comprimir_y_trasladar_imagenes</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=comprimir_y_trasladar_imagenes&amp;rev=1424975410&amp;do=diff</link>
+        <description>Comprime las imágenes en formato “.tar” para poder subirlas al cluster, después de la obtención de datos en el resonador:
+
+	*  En la máquina de la unidad de resonancia, buscar el nombre del sujeto de estudio (actualmente en la carpeta “dicom2015”).
+	*  Click derecho y poner la opción “7-zip”.
+	*  Seleccionar la opción “ad to archive”.
+	*  Seleccionar la opción “Tar”</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=datos&amp;rev=1407433732&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:52-05:00</dc:date>
+        <title>datos</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=datos&amp;rev=1407433732&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=datoscluster&amp;rev=1407433733&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:53-05:00</dc:date>
+        <title>datoscluster</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=datoscluster&amp;rev=1407433733&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=de_dicom_a_nifti&amp;rev=1424978369&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:19:29-05:00</dc:date>
+        <title>de_dicom_a_nifti</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=de_dicom_a_nifti&amp;rev=1424978369&amp;do=diff</link>
+        <description>Usar en la terminal el siguiente comando: inb_dcm2nii.sh
+
+Debe escribirse en el siguiente orden:
+Comando
+Espacio
+Archivo a convertir (debe escribirse toda la ruta, o bien puede arrastrarse el archivo)
+Espacio
+Nombre final del archivo y agregar: .nii.gz
+Ejemplo:</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=de_parrec_a_nifti&amp;rev=1424978697&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:24:57-05:00</dc:date>
+        <title>de_parrec_a_nifti</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=de_parrec_a_nifti&amp;rev=1424978697&amp;do=diff</link>
+        <description>Usar en la terminal el siguiente comando: PARconv_v1.12.sh
+
+Debe escribirse en el siguiente orden:
+Comando
+Espacio
+Archivo a convertir (debe escribirse toda la ruta, o bien puede arrastrarse el archivo)
+Espacio
+Nombre final del archivo y agregar: .nii.gz
+Ejemplo:</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=descomprimir_imagenes_y_transformarlas_de_formato_dicom_a_formato_niifti&amp;rev=1424976064&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:41:04-05:00</dc:date>
+        <title>descomprimir_imagenes_y_transformarlas_de_formato_dicom_a_formato_niifti</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=descomprimir_imagenes_y_transformarlas_de_formato_dicom_a_formato_niifti&amp;rev=1424976064&amp;do=diff</link>
+        <description>Descomprimir imágenes y transformarlas de formato dicom a formato niifti:
+
+	*  Escribir la ruta para llegar a la carpeta en donde se encuentra el archivo
+	*  Escribir el comando “tar xvf” (para archivos con formato “.tar”), o el comando unrar x (para archivos con formato “.rar”).
+	*  Escribir el nombre del archivo.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=difusion&amp;rev=1427394625&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-26T13:30:25-05:00</dc:date>
+        <title>difusion</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=difusion&amp;rev=1427394625&amp;do=diff</link>
+        <description>Procesar datos de imágenes de difusión es bastante complicado, y hay muchos aspectos qué vigilar para lograr obtener un análisis optimo. En esta página se describen algunas técnicas.
+
+Conversion de directorios DICOM a imágenes Nifti
+
+Para convertir datos de Dicom a Nifti utilizamos el comando:
+
+
+inb_dcm2nii.sh DICOMdir mi_archivo.
+
+
+Esto nos entregará tres archivos:
+mi_archivo.nii
+mi_archivo.bval
+mi_archivo.bvec.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=eddy_correct_revpe&amp;rev=1424912332&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T18:58:52-05:00</dc:date>
+        <title>eddy_correct_revpe</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=eddy_correct_revpe&amp;rev=1424912332&amp;do=diff</link>
+        <description>Correción de las corrientes Eddy utilizando una adquisición reversa de fase.
+
+Por el momento no se ha utilizado completamente esta herramienta, pero en esta página se encuentra toda la información necesaria: Guía de TOPUP FLS.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=enganar&amp;rev=1424980130&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:48:50-05:00</dc:date>
+        <title>enganar</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=enganar&amp;rev=1424980130&amp;do=diff</link>
+        <description>Este truco te ayudara cuando el GUI de FEAT:
+
+	*  no te deja hacer algunos cambios especificos
+		*  tu modelo tiene muchas variables (al generar el modelo, FSL se traba!!)
+
+Lo que tienes que hacer es buscar y abrir el archivo desing.fsf que se encuentra en la carpeta nombre.feat o nombre.gfeat (inciso a de la imagen).</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=enlaces&amp;rev=1424918188&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T20:36:28-05:00</dc:date>
+        <title>enlaces</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=enlaces&amp;rev=1424918188&amp;do=diff</link>
+        <description>3D Slicer
+
+Es un programa gratuito para el análisis de imágenes y visualización científica\
+
+
+
+
+ITKsnap
+
+Es un programa para visualización y segmentación de imagenes 3D
+
+
+
+
+Volbrain
+
+Es un sistema de volumetria de imágenes de resonancia magnética en linea</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=errorescluster&amp;rev=1424973677&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:01:17-05:00</dc:date>
+        <title>errorescluster</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=errorescluster&amp;rev=1424973677&amp;do=diff</link>
+        <description>En esta página se describen los errores clásicos del cluster.
+
+Supongamos que acabamos de mandar un job, ya sea con fsl_sub o a través de alguna interface gráfica, como por ejemplo Feat. La pregunta es: está corriendo mi job? La respuesta es fácil de encontrar:</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=faq&amp;rev=1427394827&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-26T13:33:47-05:00</dc:date>
+        <title>faq</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=faq&amp;rev=1427394827&amp;do=diff</link>
+        <description>Trucos de Luis Concha.
+
+¿Cómo lograr que médicos clínicos vean la IRM?
+:     Para compartir las imágenes de IRM con médicos clínicos los datos tienen que extraerse directamente de la máquina de donde se hayan exportado en una memoria externa, ya que la mayoria de los programas médicos usados en clínica no lo pueden leer el disco que se puede quemar en el VIRTUAL. Y se pueden mandar comprimidos (.zip) para mayor velocidad y eficiencia.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=feat&amp;rev=1424976433&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:47:13-05:00</dc:date>
+        <title>feat</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=feat&amp;rev=1424976433&amp;do=diff</link>
+        <description>1.Data
+
+2.Pre-stats
+
+3.Stats
+
+4.Registration</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=feat2fs&amp;rev=1415037069&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-11-03T11:51:09-05:00</dc:date>
+        <title>feat2fs</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=feat2fs&amp;rev=1415037069&amp;do=diff</link>
+        <description>This tutorial is fantastic
+&lt;https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/FslFeatFreeSurfer&gt;
+
+Basically:
+
+	*   Register the functionals to the freesurfer's T1 volume.
+
+reg-feat2anat --feat /path/to/analysis.feat --subject subjectID
+
+
+If registration to std space has not been performed, you need to do it first.
+If it is a gfeat, then you may need to copy the /reg directory from the first level analysis.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=feat_render_highres&amp;rev=1424933492&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:51:32-05:00</dc:date>
+        <title>feat_render_highres</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=feat_render_highres&amp;rev=1424933492&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=fmri&amp;rev=1425328347&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-02T14:32:27-05:00</dc:date>
+        <title>fmri</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=fmri&amp;rev=1425328347&amp;do=diff</link>
+        <description>Primero que nada, define la versión que vas a utilizar.
+La versión por default es 4, pero tenemos la posibilidad de utilizar la versión 5. Decide por una, y siempre realiza todos tus análisis en una de ellas!.
+
+Aquí podrás encontrar cómo utilizar la herramienta Feat de fsl.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=for&amp;rev=1424930203&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T23:56:43-05:00</dc:date>
+        <title>for</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=for&amp;rev=1424930203&amp;do=diff</link>
+        <description>for: iteración de comandos
+
+for es un comando poderoso que permite repetir un comando en varios archivos. La traducción de for sería:
+
+Definiendo &lt;mi_variable&gt; como &lt;mis_archivos&gt;; se debe de &lt;usar_comando&gt; &lt;mi_variable&gt;; terminado
+
+for var in *.*; do &lt;comando&gt; $var; done</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=fsl&amp;rev=1424988380&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T16:06:20-05:00</dc:date>
+        <title>fsl</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=fsl&amp;rev=1424988380&amp;do=diff</link>
+        <description>Transformar una máscara (espacio estándar-atlas) al espacio del sujeto (fMRI)
+
+1. LLevar la máscara a un espacio nuevo
+
+arafat@tanner:~/Desktop/$ flirt -in  mascara.nii -ref funcional_sujeto.nii -applyxfm -init standard2example_func.mat -out Mascara_highres.nii</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=fslroi&amp;rev=1424922357&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T21:45:57-05:00</dc:date>
+        <title>fslroi</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=fslroi&amp;rev=1424922357&amp;do=diff</link>
+        <description>Extrae una región de interés (ROI region of interest) de una imagen.
+
+A) Es posible tomar una ROI de 3 dimensiones (3D) de un conjunto de datos de 3D, o en caso de que sea de 4 dimensiones (4D) la misma ROI se toma de cada punto temporal y se crea un nuevo conjunto de datos de 4D.
+
+B) Extrae solo algunos puntos de un conjunto de 4D.
+
+C) Controla los limites del espacio y tiempo para la ROI. Hay que darse cuenta que los argumentos son index mínimo y tamaño (no máximo index). Así que para extraer …</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=fslstats&amp;rev=1424975358&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:29:18-05:00</dc:date>
+        <title>fslstats</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=fslstats&amp;rev=1424975358&amp;do=diff</link>
+        <description>Algo que se requiere muy frecuentemente es extraer el valor de algunos voxeles dentro de un volumen de mapas cuantitativos, como por ejemplo un mapa de FA. La herramienta más práctica para ésto es fslstats. Vamos a ver un ejemplo:
+
+Me interesa sacar el valor de FA en una región del cuerpo calloso. Lo primero es hacer una máscara, y en este caso lo voy a hacer con fslview, aunque se puede hacer con mrview, con freeview, itksnap, matlab, o cualquier cosa que me sepa grabar un archivo nifti con las…</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=gestion&amp;rev=1424932425&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:33:45-05:00</dc:date>
+        <title>gestion</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=gestion&amp;rev=1424932425&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=grosorcortical&amp;rev=1427422774&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-26T21:19:34-05:00</dc:date>
+        <title>grosorcortical</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=grosorcortical&amp;rev=1427422774&amp;do=diff</link>
+        <description>Grosor cortical
+
+El grosor cortical es una medida dada por la distancia existente entre la superficie límite sustancia blanca y sustancia gris , y la superficie pial.
+
+FreeSurfer
+
+Es una plataforma desarrollada por el Hospital General de Massachusetts para el análisis de IRM. Facilita la visualización, el análisis volumétrico de algunas estructuras y la obtención del grosor cortical: &lt;http://freesurfer.net/&gt;</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=herramienta_feat&amp;rev=1424978803&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T13:26:43-05:00</dc:date>
+        <title>herramienta_feat</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=herramienta_feat&amp;rev=1424978803&amp;do=diff</link>
+        <description>T1, que es la imagen anatómica
+
+Funcional, que es la imagen funcional
+
+Archivo .times proveniente de la conversión de eprime
+
+Los archivos T1 y Funcional pueden estar en formato DICOM o en formato PARREC y ambos deben ser convertidos a formato NIFTI</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=home&amp;rev=1407433732&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:52-05:00</dc:date>
+        <title>home</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=home&amp;rev=1407433732&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=image&amp;rev=1424986979&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T15:42:59-05:00</dc:date>
+        <title>image</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=image&amp;rev=1424986979&amp;do=diff</link>
+        <description>Comprimir y trasladar imágenes
+
+Comprime las imágenes para poder subirlas al cluster, después de la obtención de datos en el resonador.
+
+Descomprimir imágenes y transformarlas de formato dicom a formato niifti
+
+Descomprime las imágenes en formato .tar o .rar, para poder analizarlas.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=inicio&amp;rev=1426785775&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-19T12:22:55-05:00</dc:date>
+        <title>inicio</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=inicio&amp;rev=1426785775&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=keygen&amp;rev=1424928609&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T23:30:09-05:00</dc:date>
+        <title>keygen</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=keygen&amp;rev=1424928609&amp;do=diff</link>
+        <description>ssh-keygen
+
+Por el momento habrá que revisar este link generating ssh keys</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=kill&amp;rev=1424932946&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:42:26-05:00</dc:date>
+        <title>kill</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=kill&amp;rev=1424932946&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=lconcha_tricks&amp;rev=1424918269&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T20:37:49-05:00</dc:date>
+        <title>lconcha_tricks</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=lconcha_tricks&amp;rev=1424918269&amp;do=diff</link>
+        <description>Algunos trucos de cosas truculentas, y otras muy bobas pero que me tardé en entender cómo hacerlas.
+
+Lo que hago mas frecuentemente es un for loop, que directamente en la terminal debe usar punto y coma en sustitución de un script formal en donde se hace una nueva línea. Por ejemplo:</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=mrtrix3&amp;rev=1427323380&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-25T17:43:00-05:00</dc:date>
+        <title>mrtrix3</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=mrtrix3&amp;rev=1427323380&amp;do=diff</link>
+        <description>Por lo menos hasta septiembre 2014, mrtrix3 está todavía en beta y en continua evolución. Su documentación está aquí.
+
+OJO: El default es mrtrix versión 2, para usar las herramientas de la versión 3 debemos ejecutar en cada nueva terminal:
+
+mrtrix3</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=opciones&amp;rev=1425326106&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-02T13:55:06-05:00</dc:date>
+        <title>opciones</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=opciones&amp;rev=1425326106&amp;do=diff</link>
+        <description>Los análisis de alto nivel se dividen en dos tipos: segundo y tercer nivel. Los análisis de segundo nivel incluyen, por ejemplo, contrastes en un mismo sujeto (utilizando sus diferentes COPES), mientras que los análisis de tercer nivel constituyen el promedio de un grupo de sujetos en una condición o contraste particular (directorios FEAT).</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=permisos&amp;rev=1424927872&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T23:17:52-05:00</dc:date>
+        <title>permisos</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=permisos&amp;rev=1424927872&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=rederhighres&amp;rev=1424930192&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T23:56:32-05:00</dc:date>
+        <title>rederhighres</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=rederhighres&amp;rev=1424930192&amp;do=diff</link>
+        <description>&lt;markdown&gt;
+*[FEAT render highres]: renderhighres
+## Uso del comando renderhighres</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=regiones_en_comun&amp;rev=1425328724&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-03-02T14:38:44-05:00</dc:date>
+        <title>regiones_en_comun</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=regiones_en_comun&amp;rev=1425328724&amp;do=diff</link>
+        <description>1. Realizar un análisis FEAT de alto nivel (higher-level analysis) donde se promedie la activación de la primera condición A &gt; B (ej. música &gt; silencio) en todos los sujetos. En la pestaña de Post-stats se debe de seleccionar una máscara en el recuadro de Pre-threshold masking, esta máscara debe salir del resultado obtenido del análisis de alto nivel la segunda condición de interés
+C &gt; B (cluster_mask_zstat#.nii.gz).</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=registerdwi&amp;rev=1424976486&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T12:48:06-05:00</dc:date>
+        <title>registerdwi</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=registerdwi&amp;rev=1424976486&amp;do=diff</link>
+        <description>Registrar dos imágenes distintas es muy fácil cuando son del mismo sujeto y tienen el mismo contraste; si son de diferentes sujetos, todas del mismo contraste, pero las queremos llevar a un espacio estándar, estamos hablando de normalización, y como puede verse aquí, eso tampoco es difícil. El siguiente paso de complejidad es registrar dos imágenes del mismo sujeto pero con contrastes distintos (p.ej. una T1 con una T2). Habitualmente eso lo logramos utilizando una función de costo apropiada, co…</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=registration&amp;rev=1424966940&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T10:09:00-05:00</dc:date>
+        <title>registration</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=registration&amp;rev=1424966940&amp;do=diff</link>
+        <description>Las imágenes de un mismo sujeto pueden haber sido adquirida en distintas sesiones, o el sujeto pudo haberse movido entre ellas. Si nos interesa que estén en el mismo espacio, debemos modificar espacialmente (mover) una de ellas para que se empalme con la otra (imagen fija o target). A este proceso se le llama registro.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=reorientar_imagenes&amp;rev=1424988084&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T16:01:24-05:00</dc:date>
+        <title>reorientar_imagenes</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=reorientar_imagenes&amp;rev=1424988084&amp;do=diff</link>
+        <description>Hay veces en las que al abrir una imagene en FslView se observa con una orientación diferente a la que estamos acostumbrados. En la mayoría de los casos sólo es la visualización la que no está bien, lo cual no interfiere con los análisis que se realicen con las imágenes.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=respaldohome&amp;rev=1407433732&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-07T12:48:52-05:00</dc:date>
+        <title>respaldohome</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=respaldohome&amp;rev=1407433732&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=servido&amp;rev=1424924268&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T22:17:48-05:00</dc:date>
+        <title>servido</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=servido&amp;rev=1424924268&amp;do=diff</link>
+        <description>Es un sistema de control de revisiones distribuido que tiene enfásis en velocidad e integridad de datos, así como la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. Se ha convertido en el sistema de control de versiones más utilizado en el desarrollo de software.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=servidorgit&amp;rev=1408670998&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-08-21T20:29:58-05:00</dc:date>
+        <title>servidorgit</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=servidorgit&amp;rev=1408670998&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=ssh&amp;rev=1424930931&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:08:51-05:00</dc:date>
+        <title>ssh</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=ssh&amp;rev=1424930931&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=start&amp;rev=1424930627&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-26T00:03:47-05:00</dc:date>
+        <title>start</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=start&amp;rev=1424930627&amp;do=diff</link>
+        <description>El término clúster (del inglés cluster, “grupo” o “racimo”) se aplica a los conjuntos o conglomerados de computadoras construidos mediante la utilización de hardwares comunes y que se comportan como si fuesen una única computadora.
+
+Cómo y dónde se encuentran distribuidos los datos. En qué carpetas se pueden realizar pruebas, intercambiar archivos, guardar datos o ponerlos disponibles para el uso en el clúster.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=temporal&amp;rev=1422981584&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-03T10:39:44-05:00</dc:date>
+        <title>temporal</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=temporal&amp;rev=1422981584&amp;do=diff</link>
+        <description>Si quieres hacer pruebas que no requieran del cluster, puedes hacer carpetas dentro de  /tmp, que vive físicamente en la computadora que estás usando. Ojo: Esta carpeta no se exporta al cluster, por lo que no podrás hacer uso de ningún comando de cluster con datos aquí, y si lo haces, vas a tener uno de tus jobs con status de ERROR..</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=tricks&amp;rev=1422982555&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-03T10:55:55-05:00</dc:date>
+        <title>tricks</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=tricks&amp;rev=1422982555&amp;do=diff</link>
+        <description>Trucos de Luis Concha.</description>
+    </item>
+    <item rdf:about="http://172.24.80.100/dokuwiki/doku.php?id=vectores&amp;rev=1424913389&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-02-25T19:16:29-05:00</dc:date>
+        <title>vectores</title>
+        <link>http://172.24.80.100/dokuwiki/doku.php?id=vectores&amp;rev=1424913389&amp;do=diff</link>
+        <description>Próximamente</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,41 @@
+
+<h1 class="sectionedit1" id="de_parrec_a_nifti">De PARREC a NIFTI</h1>
+<div class="level1">
+
+<p>
+Usar en la terminal el siguiente comando: <strong>PARconv_v1.12.sh</strong>
+</p>
+
+<p>
+Debe escribirse en el siguiente orden:
+</p>
+<pre class="code">Comando
+Espacio
+Archivo a convertir (debe escribirse toda la ruta, o bien puede arrastrarse el archivo)
+Espacio
+Nombre final del archivo y agregar: .nii.gz</pre>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">PARconv_v1.12.sh &#039;miarchivoT1&#039; nombrefinaldelarchivo.nii.gz</pre>
+
+<p>
+Este comando <strong>NO</strong> permite reorientar la imagen de manera directa, por lo que es necesario usar en la terminal otro comando el cual es: <strong>fslreorient2std</strong>
+</p>
+
+<p>
+Debe escribirse en el siguiente orden:
+</p>
+<pre class="code">Comando
+Espacio
+Archivo a reorientar (debe escribirse toda la ruta, o bien puede arrastrarse el archivo)
+Espacio
+Nombre final del archivo</pre>
+
+<p>
+Ejemplo:
+</p>
+<pre class="code">fslreorient2std &#039;archivoareorientar.nii.gz&#039; nombrefinaldelarchivo.nii.gz</pre>
+
+</div>

@@ -1,0 +1,16 @@
+inb_register_t1_to_dwi_via_csf.sh
+&nbsp;
+inb_register_t1_to_dwi_via_csf.sh <span class="sy0">&lt;</span>t1<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>adc<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>outbase<span class="sy0">&gt;</span> <span class="br0">&#91;</span>Options<span class="br0">&#93;</span>
+&nbsp;
+Note that t1 and adc must be skull-stripped
+&nbsp;
+&nbsp;
+Options
+&nbsp;
+  -keep_tmp
+  <span class="re5">-tmpDir</span> <span class="sy0">&lt;/</span>some<span class="sy0">/</span>folder<span class="sy0">&gt;</span>
+&nbsp;
+&nbsp;
+ LU15 <span class="br0">&#40;</span>0N<span class="br0">&#40;</span>H4
+ INB, Feb <span class="nu0">2015</span>.
+ lconcha<span class="sy0">@</span>unam.mx

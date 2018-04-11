@@ -1,0 +1,46 @@
+
+<h1 class="sectionedit1" id="gestion_de_procesos_y_del_sistema">Gestion de procesos y del sistema</h1>
+
+<h2 class="sectionedit2" id="top">top</h2>
+
+<p>Muestra los procesos que se están ejecutando y permite matarlos
+htop
+Un programa que permite observar los procesos activos,</p>
+
+<h2 class="sectionedit2" id="htop">htop</h2>
+
+<p>El comando <code>htop</code> inicia esta interfaz en la cual nos desplazamos con las flechas arriba y abajo. El comando tiene mas opciones de control. Sin embargo nos pueden interesar dos, F6 que permite seleccionar el orden en el que se presentan los procesos, son de especial interes el arreglo por <strong>USER</strong>, <strong>CPU%</strong> y <strong>MEM%</strong>.</p>
+
+<h2 class="sectionedit2" id="ps">ps</h2>
+
+<p>Muestra la lista de procesos del usuario.
+Este comando es util en varias cuestiones por ejemplo nos puede mostrar los procesos en nuestro systema, el estado del mismo, datos sobre el tamano de algun proceso, usuarios a los que pertenecen algunos procesos, tiempo del CPU, tiempo del reloj y muchos mas.
+Parametros:</p>
+
+<pre><code> -a Muestra todos los procesos con un control, este comando no solo muestra datos del usario actual.
+ -r Muestra procesos que solo estan en ejecucion 
+ -x Muestra procesos los cuales la termina no tiene control.
+ -u Muestra los procesos del propio usuario (owner process)
+ -l Muestra los datos en formato de una lista larga
+ -w Muestra procesos de la linea de comandos.
+</code></pre>
+
+<h2 class="sectionedit2" id="free_-h">free -h</h2>
+
+<p>Muestra el estado de la memoria del CPU actual.</p>
+
+<h2 class="sectionedit2" id="df">df</h2>
+
+<p>Muestra el espacio libre de los discos/dispositivos. Legible a humanos (-h)</p>
+
+<pre><code>  df -h
+</code></pre>
+
+<h2 class="sectionedit2" id="ping">ping</h2>
+
+<p>Indica si hay respuesta por parte del servidor</p>
+
+<pre><code>  ping mansfield
+</code></pre>
+
+<h3 class="sectionedit3" id="el_monitoreo_del_sistema_es_una_actividad_adjunta_al_uso_del_cluster">El monitoreo del sistema es una actividad adjunta al uso del <a href="?id=start">cluster</a></h3></html>

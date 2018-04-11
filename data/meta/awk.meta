@@ -1,0 +1,13 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1429677100;s:8:"modified";i:1442437658;}s:7:"creator";s:23:"Raúl Rodríguez Cruces";s:4:"user";s:7:"rcruces";s:11:"last_change";a:7:{s:4:"date";i:1442437658;s:2:"ip";s:12:"172.24.80.99";s:4:"type";s:1:"E";s:2:"id";s:3:"awk";s:4:"user";s:7:"rcruces";s:3:"sum";s:6:"[AWK] ";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:7:"rcruces";s:23:"Raúl Rodríguez Cruces";}s:5:"title";s:3:"AWK";s:11:"description";a:2:{s:15:"tableofcontents";a:7:{i:0;a:4:{s:3:"hid";s:3:"awk";s:5:"title";s:3:"AWK";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:17:"estructura_de_awk";s:5:"title";s:17:"Estructura de awk";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:40:"declarar_variables_de_bash_dentro_de_awk";s:5:"title";s:40:"Declarar variables de BASH dentro de awk";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:39:"redireccionar_valores_generados_por_awk";s:5:"title";s:39:"Redireccionar valores generados por awk";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:52:"agregar_variables_al_principio_o_al_finalde_una_fila";s:5:"title";s:52:"Agregar variables al PRINCIPIO o al FINALde una fila";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:39:"seleccion_de_elementos_filas_y_columnas";s:5:"title";s:41:"Selección de elementos, filas y columnas";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:6;a:4:{s:3:"hid";s:53:"operaciones_arimeticas_con_variables_de_coma_flotante";s:5:"title";s:54:"Operaciones ariméticas con variables de coma flotante";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:317:"AWK es un lenguaje de programación diseñado para procesar datos basados en texto, ya sean ficheros o flujos de datos.
+
+Estructura de awk
+
+awk bla bla bla bla bla pendiente
+
+blablablabla blablablabla
+
+ awk bla bla bla BEGIN END print 
+
+Declarar variables de BASH dentro de awk
+
+awk -v d=INICIO '{print d ” ” $0}'";}s:8:"relation";a:2:{s:10:"references";a:2:{s:9:"awk_selec";b:1;s:10:"awk_arimet";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1429677100;s:8:"modified";i:1442437658;}s:7:"creator";s:23:"Raúl Rodríguez Cruces";s:4:"user";s:7:"rcruces";s:11:"last_change";a:7:{s:4:"date";i:1442437658;s:2:"ip";s:12:"172.24.80.99";s:4:"type";s:1:"E";s:2:"id";s:3:"awk";s:4:"user";s:7:"rcruces";s:3:"sum";s:6:"[AWK] ";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:7:"rcruces";s:23:"Raúl Rodríguez Cruces";}}}

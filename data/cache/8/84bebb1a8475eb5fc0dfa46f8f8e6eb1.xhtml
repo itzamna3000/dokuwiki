@@ -1,0 +1,25 @@
+
+<h2 class="sectionedit2" id="ajuste_de_permisos_para_trabajos_en_el_cluster">Ajuste de permisos para trabajos en el clúster</h2>
+
+<p>Es importante ajustar los permisos de los archivos que se van a mandar a procesar al clúster, especificando la capacidad de escribir y leer para el grupo y ademas que el grupo sea fmriuser o bioinfo.</p>
+
+<p>Para asignar el grupo, sea fmriuser o bioinfo a una carpeta, subcarpetas y los archivos que contenga se puede usar el comando:</p>
+
+<pre><code>chown -R usuario:grupo carpeta/
+</code></pre>
+
+<blockquote>
+  <p>Nota:<br>
+  Puede ocurrir que no se pueda cambiar el grupo si no somos los dueños de la
+  carpeta en cuestión. Si es necesario ajustar el grupo y por alguna razón no
+  funciona el comando, el administrador del equipo en cuestión puede realizar el cambio.</p>
+</blockquote>
+
+<p>En la terminal el comando para permitir escritura y lectura al grupo es:</p>
+
+<pre><code> chmod -R g+rwx carpeta/
+</code></pre>
+
+<p>De modo gráfico se puede hacer como lo muestra el siguiente gif animado:</p>
+
+<p><img src="./data/pages/permisos.gif" alt="Permisos"></p></html>

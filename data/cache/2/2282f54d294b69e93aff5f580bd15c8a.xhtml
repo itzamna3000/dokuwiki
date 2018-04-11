@@ -1,0 +1,64 @@
+
+<p>
+This tutorial is fantastic
+<a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/FslFeatFreeSurfer" class="urlextern" title="https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/FslFeatFreeSurfer"  rel="nofollow">https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/FslFeatFreeSurfer</a>
+</p>
+
+<p>
+Basically:
+</p>
+<ol>
+<li class="level1"><div class="li">  Register the functionals to the freesurfer&#039;s T1 volume.</div>
+</li>
+</ol>
+
+<p>
+<code>reg-feat2anat –feat /path/to/analysis.feat –subject subjectID
+</code>
+</p>
+
+<p>
+If registration to std space has not been performed, you need to do it first.
+If it is a gfeat, then you may need to copy the <code>/reg</code> directory from the first level analysis.
+</p>
+
+<p>
+However, step 1 was failing for me, specifically during reg-feat2anat. I tracked the bug to this:
+<a href="http://www.mail-archive.com/freesurfer@nmr.mgh.harvard.edu/msg29122.html" class="urlextern" title="http://www.mail-archive.com/freesurfer@nmr.mgh.harvard.edu/msg29122.html"  rel="nofollow">http://www.mail-archive.com/freesurfer@nmr.mgh.harvard.edu/msg29122.html</a>
+</p>
+
+<p>
+All that is needed to fix the registration bug is to replace the script as provided in the above link. The only difference between the old version and the new one is that the new one specifies the file suffix, while the old one does not. Stupid bug, I lost a whole morning on this.
+</p>
+
+<p>
+While you can see the volume overlaid on the surface with tksurfer, as the tutorial suggests, freeview works much smoother.
+</p>
+
+<p>
+First, load the backround, subject-space t1 and surface
+</p>
+
+<p>
+<code>freeview -v subject/mri/brain.mgz -f subject/surf/lh.white</code>
+</p>
+
+<p>
+now, load the overlay, but taking care to specify the registration needed to go from fMRI subject space to T1 subject space. The registratin is featDirectory <code>/reg/freesurfer/anat2exf.register.dat</code>
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=feat2fs&amp;media=selection_027.png" class="media" title="selection_027.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;tok=b51a71&amp;media=selection_027.png" class="mediacenter" alt="" width="200" /></a>
+</p>
+
+<p>
+And, to load data that is in standard space onto the subjects surface, for example after comparing two copes of the same subject using a fixed effects model, we need another transformation, this time anat2std.register.dat.
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=feat2fs&amp;media=feat2fsl:selection_028.png" class="media" title="feat2fsl:selection_028.png"><img src="/dokuwiki/lib/exe/fetch.php?w=200&amp;tok=cb811c&amp;media=feat2fsl:selection_028.png" class="mediacenter" alt="" width="200" /></a>
+</p>
+
+<p>
+That same transformation can also be used to load the volumes (e.g. zstat1.nii.gz) to overlay on top of brain.mgz of the subject.
+</p>

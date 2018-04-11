@@ -1,0 +1,104 @@
+
+<p>
+Por lo menos hasta septiembre 2014, mrtrix3 está todavía en <em>beta</em> y en continua evolución. Su documentación está <a href="https://github.com/jdtournier/mrtrix3/wiki" class="urlextern" title="https://github.com/jdtournier/mrtrix3/wiki"  rel="nofollow">aquí</a>.
+</p>
+
+<p>
+OJO: El default es mrtrix versión 2, para usar las herramientas de la versión 3 debemos ejecutar en cada nueva terminal:
+</p>
+
+<p>
+<code>mrtrix3</code>
+</p>
+
+<p>
+… y es recomendable que entonces también usemos la versión 5 de <em>fsl</em>, del cual el default es la versión 4. Igualmente, en cada terminal nueva:
+</p>
+
+<p>
+<code>fsl5</code>
+</p>
+
+<p>
+En el laboratorio tenemos algunos scripts para facilitar algunos pasos. Se describe a continuación el flujo a seguir para realizar ACT y SIFT. Asumimos que partimos de imágenes que se les hizo ya BET y eddy_correct.
+</p>
+
+<p>
+Se sugiere consultar la <a href="https://github.com/jdtournier/mrtrix3/wiki/MRtrix-0.2-equivalent-commands" class="urlextern" title="https://github.com/jdtournier/mrtrix3/wiki/MRtrix-0.2-equivalent-commands"  rel="nofollow">tabla de equivalencias de comandos entre versiones 2 y 3 de mrtrix</a>.
+</p>
+
+<h1 class="sectionedit1" id="pre-procesamiento">Pre-procesamiento</h1>
+<div class="level1">
+
+<p>
+Para garantizar que la amplitud de las FOD no esté modulada por inhomogeneidades de B1, y para estandarizar las unidades con la que se miden (en lugar de arbitrarias, que sean un porcentaje de las imágenes b=0), tenemos el script <code>inb_mrtrix3_preproc.sh</code>. A manera de ejemplo:
+</p>
+
+<p>
+1. Obtener una máscara. Primero debemos extraer el primer volumen y luego correr bet.
+</p>
+
+<p>
+<code>fslroi dti_ec.nii.gz b0 0 1</code>
+</p>
+
+<p>
+<code>bet b0.nii.gz b0 -m -n -f 0.25</code>
+</p>
+
+<p>
+2. Ahora sí corremos el script de preprocesamiento de mrtrix3
+</p>
+
+<p>
+<code>inb_mrtrix3_preproc.sh dti_ec.nii.gz dti_ec_encoding.b 1000 b0_mask.nii.gz proc</code>
+</p>
+
+<p>
+Este paso es tardado, suficiente para un café. Una vez concluido, generará los siguientes resultados:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>proc_mask.nii.gz</code>  Una máscara del cerebro que trata de minimizar la periferia ruidosa del cerebro. No es perfecta, pero es mejor que la previa.</div>
+</li>
+<li class="level1"><div class="li"> <code>proc_dwi_biasCorr_ratios.nii.gz</code>  Uno de los dos resultados principales. Son las imágenes DWI pero (a) corregidas por inhomogeneidades de B1 y con unidades [0 1].</div>
+</li>
+<li class="level1"><div class="li"> <code>proc_avDWI_ratios.nii.gz</code> El promedio temporal del archivo <code>proc_dwi_biasCorr_ratios.nii.gz</code>. Util para usar como fondo anatómico en mrview.</div>
+</li>
+<li class="level1"><div class="li"> <code>proc_dwi_bias_field.nii.gz</code> El factor de compensación B1 aplicado a las imágenes DWI originales.</div>
+</li>
+<li class="level1"><div class="li"> <code>proc_response.txt</code> El otro resultado importante. Es la <em>response_function</em> a utilizar para realizar CSD.  Usando <code>cat proc_response.txt</code> podemos ver el contenido. En este ejemplo es <code>1.759339452 -0.5281734467 0.1055925936 -0.01716192625 0.0004632802156</code>. El script usará <code>lmax</code> tan alto como los datos lo soporten, por lo que el número de coeficientes puede variar, pero los rangos de los valores deben ser similares a éstos. </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Pre-procesamiento" [868-2619] -->
+<h1 class="sectionedit2" id="deconvolucion_esferica_de_la_senal_dwi">Deconvolución esférica de la señal DWI</h1>
+<div class="level1">
+
+<p>
+Como vemos al final del script anterior, obtener los FODs es ahora trivial:
+</p>
+
+<p>
+<code>dwi2fod -grad dti_ec_encoding.b -mask proc_mask.nii.gz proc_dwi_biasCorr_ratios.nii.gz proc_response.txt proc_FOD.nii.gz</code>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Deconvolución esférica de la señal DWI" [2620-2879] -->
+<h1 class="sectionedit3" id="anatomically_constrained_tractography_act">Anatomically constrained tractography (ACT)</h1>
+<div class="level1">
+
+<p>
+Para poder realizar ACT necesitamos una imagen en donde se segmente los tejidos de acuerdo a (1) s. gris cortical, (2) s. gris subcortical, (3) s. blanca, (4) LCR y (5) tejido patológico. A esta convención mrtrix3 la llama un archivo 5TT (5-tissue type) y es necesario para correr ACT y SIFT. Lo ideal sería tener imágenes DWI corregidas mediante obtención reversa de fase, y co-registrar imágenes T1 de las cuales podemos derivar este archivo 5TT, pero en caso de no tenerlo, podemos usar un script que trabaja únicamente en espacio DWI:
+</p>
+
+<p>
+<code>inb_mrtrix3_create_5TT_from_DWI.sh &lt;fa[.gz]&gt; &lt;adc[.gz]&gt; &lt;output5TT.nii[.gz]&gt;</code>
+</p>
+
+<p>
+Como no tenemos aún los archivos de FA ni ADC, podemos usar <code>inb_mrtrix_proc.sh</code> con el switch <code>-noCSD</code> para generarlos.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Anatomically constrained tractography (ACT)" [2880-] -->

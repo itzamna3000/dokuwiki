@@ -1,0 +1,50 @@
+
+<h1 class="sectionedit1" id="que_es_el_home">¿Que es el Home?...</h1>
+
+<p>El home es un espacio que tiene cada usuario, es el lugar donde nos encontramos
+al iniciar sesión. Y suele tener permisos de <strong>escritura/lectura</strong> esclusivos para
+el usuario al que pertenece. Tambien en este espacio suelen residir los
+archivos de configuración esclusivos para el usuario.</p>
+
+<h1 class="sectionedit1" id="donde_esta">¿Donde esta?</h1>
+
+<p>En la estructura de los sistemas <strong>Unix</strong> suelen encontrarse en la dirección</p>
+
+<pre><code> /home/usuario
+</code></pre>
+
+<p>Pero en el cluster del laboratorio, la ruta correcta es:</p>
+
+<pre><code>/home/inb/usuario
+</code></pre>
+
+<p>Donde usuario es sustituido por el usuario en curso. Se puede acceder mediante</p>
+
+<h4 class="sectionedit4" id="ruta_absoluta">Ruta absoluta</h4>
+
+<pre><code> cd /home/inb/usuario
+</code></pre>
+
+<h4 class="sectionedit4" id="ruta_con_wildcard_comodin">Ruta con "wildcard" (comodín)</h4>
+
+<pre><code>cd ~/
+</code></pre>
+
+<h4 class="sectionedit4" id="tambien_nos_podemos_trasladar_usando_el_comando_cd_sin_argumentos">También nos podemos trasladar usando el comando cd sin argumentos</h4>
+
+<pre><code>cd 
+</code></pre>
+
+<p>O sea, los tres formatos del comando <strong>cd</strong> tienen la misma función.</p>
+
+<p>En el caso de los equipos que forma parte del clúster, el directorio home se
+encuentra fisicamente en el servidor central.</p>
+
+<h1 class="sectionedit1" id="y_que_le_pongo">Y... ¿que le pongo?</h1>
+
+<p>Es importate señalar  que debido a la configuración de
+<a href="?id=datos">respaldo</a> y <a href="?id=datoscluster">almacenamiento</a> del clúster es
+recomendable que en esta carpeta no se coloquen archivos de gran tamaño. Dando
+preferencía a archivos como scripts, archivos de configuración, documentos. En
+el caso de quere guardar archivos que se consideren grandes y que no se deseen
+respaldar se puede recurrir al uso de la carpeta <a href="?id=temporal">temporal</a>.</p></html>

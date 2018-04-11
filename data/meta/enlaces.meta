@@ -1,0 +1,17 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1424918188;s:8:"modified";i:1424918188;}s:7:"creator";s:23:"Raúl Rodríguez Cruces";s:4:"user";s:7:"rcruces";s:11:"last_change";a:7:{s:4:"date";i:1424918188;s:2:"ip";s:12:"172.24.80.99";s:4:"type";s:1:"C";s:2:"id";s:7:"enlaces";s:4:"user";s:7:"rcruces";s:3:"sum";s:6:"creado";s:5:"extra";s:0:"";}s:5:"title";s:28:"Algunos Enlaces Interesantes";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:28:"algunos_enlaces_interesantes";s:5:"title";s:28:"Algunos Enlaces Interesantes";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:263:"3D Slicer
+
+Es un programa gratuito para el análisis de imágenes y visualización científica\
+
+
+
+
+ITKsnap
+
+Es un programa para visualización y segmentación de imagenes 3D
+
+
+
+
+Volbrain
+
+Es un sistema de volumetria de imágenes de resonancia magnética en linea";}s:8:"relation";a:2:{s:5:"media";a:6:{s:12:"3dslicer.png";b:1;s:11:"itksnap.png";b:1;s:11:"image10.png";b:1;s:13:"dsistudio.png";b:1;s:10:"camino.png";b:1;s:9:"noodi.png";b:1;}s:10:"firstimage";s:12:"3dslicer.png";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1424918188;}s:7:"creator";s:23:"Raúl Rodríguez Cruces";s:4:"user";s:7:"rcruces";s:11:"last_change";a:7:{s:4:"date";i:1424918188;s:2:"ip";s:12:"172.24.80.99";s:4:"type";s:1:"C";s:2:"id";s:7:"enlaces";s:4:"user";s:7:"rcruces";s:3:"sum";s:6:"creado";s:5:"extra";s:0:"";}}}

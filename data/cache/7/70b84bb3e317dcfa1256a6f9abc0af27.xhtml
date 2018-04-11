@@ -1,0 +1,44 @@
+
+<h2 class="sectionedit1" id="grosor_cortical">Grosor cortical</h2>
+<div class="level2">
+
+<p>
+El grosor cortical es una medida dada por la distancia existente entre la superficie límite sustancia blanca y sustancia gris , y la superficie pial.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Grosor cortical" [1-180] -->
+<h2 class="sectionedit2" id="freesurfer">FreeSurfer</h2>
+<div class="level2">
+
+<p>
+Es una plataforma desarrollada por el Hospital General de Massachusetts para el análisis de IRM. Facilita la visualización, el análisis volumétrico de algunas estructuras y la obtención del grosor cortical: <a href="http://freesurfer.net/" class="urlextern" title="http://freesurfer.net/"  rel="nofollow">http://freesurfer.net/</a>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "FreeSurfer" [181-443] -->
+<h1 class="sectionedit3" id="archivos_a_utilizar">Archivos a utilizar</h1>
+<div class="level1">
+
+<p>
+Para el análisis del grosor cortical utilizando Freesurfer se necesitan imágenes tipo T1-3D. Pueden ser DICOMs o nifti.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Archivos a utilizar" [444-600] -->
+<h3 class="sectionedit4" id="pasos_para_el_analisis">Pasos para el análisis</h3>
+<div class="level3">
+
+<p>
+1. Crear carpeta “SUBJECTS_DIR” en la cual se depositaran todos los outputs de los análisis. Por ejemplo, se puede poner en una CarpetaA los dicoms e indicar que los outputs sean depositados en la Carpetab:
+</p>
+<pre class="code"> &#039;&#039;/datos/maquina/usuario/CarpetaA$ export SUBJECTS_DIR=/datos/maquina/usuario/CarpetaB &#039;&#039; </pre>
+
+<p>
+2. Ahora se procede a asignar un nombre al sujeto, si es DICOM se usa el primero (a) o si es nifti, se usa toda la carpeta (b):
+</p>
+<pre class="code"> a) &#039;&#039; recon-all -s nombredelsujeto -i /datos/maquina/usuario/CarpetaA/nombredelsujeto/0001.dcm&#039;&#039;</pre>
+<pre class="code"> b)&#039;&#039; recon-all -s nombredelsujeto -i /datos/maquina/usuario/CarpetaA/nombredelsujeto/t13d.nii.gz &#039;&#039;</pre>
+
+</div>
+<!-- EDIT4 SECTION "Pasos para el análisis" [601-] -->

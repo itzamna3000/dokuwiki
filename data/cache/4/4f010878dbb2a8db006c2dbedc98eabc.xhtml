@@ -1,0 +1,156 @@
+
+<h1 class="sectionedit1" id="registro_y_normalizacion">Registro y Normalización</h1>
+<div class="level1">
+
+<p>
+Las imágenes de un mismo sujeto pueden haber sido adquirida en distintas sesiones, o el sujeto pudo haberse movido entre ellas. Si nos interesa que estén en el mismo espacio, debemos modificar espacialmente (mover) una de ellas para que se <em>empalme</em> con la otra (imagen fija o target). A este proceso se le llama <strong>registro</strong>.
+</p>
+
+<p>
+En otras ocasiones, queremos que las imágenes de dos sujetos distintos compartan el mismo espacio. Obviamente, el cerebros de cada individuo es distinto, así que lo que hacemos es mover cada una de las imágenes para que se /empalmen/ con un cerebro estándar, o <em>atlas</em>. A este proceso le llamamos <strong>normalización</strong>.
+</p>
+
+<p>
+El atlas más comunmente utilizado es el del <a href="http://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009" class="urlextern" title="http://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009"  rel="nofollow">MNI</a>, pero existen muchos otros, y en el <em>fmrilab</em> tenemos muchos de ellos instalados gracias a las librerías de <em>fsl</em>. Para saber cuáles son, visita <a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases" class="urlextern" title="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases"  rel="nofollow">esta</a> página.
+</p>
+
+<p>
+Existen muchísimas maneras de registrar o normalizar imágenes, pero en términos de métodos, se dividen en registros <em>lineales</em> y registros <em>no-lineales</em>. Los primeros simplemente rotan, trasladan, o estiran/escalan la imagen móvil para parecerse al target, y lo hacen, por definición, de manera global; un registro no-lineal, en cambio, puede afectar la imagen móvil de manera regional. Usualmente el registro lineal es mucho más rápido que el no lineal, y es suficiente para imágenes de un solo sujeto (a excepción de que existan inhomogeneidades geométricas distintas entre ellas; esto es un tema truculento y especial para registrar DWIs con T1, por ejemplo).
+</p>
+
+<p>
+En el <em>frmilab</em> usamos dos softwares distintos para hacer registros, los propios de <em>fsl</em> (<a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/flirt" class="urlextern" title="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/flirt"  rel="nofollow">flirt</a> y <a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/fnirt" class="urlextern" title="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/fnirt"  rel="nofollow">fnirt</a>), y los propios de <a href="http://picsl.upenn.edu/software/ants/" class="urlextern" title="http://picsl.upenn.edu/software/ants/"  rel="nofollow">ANTS</a>.
+</p>
+
+<p>
+Arriba están las ligas a la documentación de las herramientas adecuadas, aquí solo daremos unos ejemplos de registros y normalizaciones comunes. Como convención, utilizaremos algunas imágenes de ejemplo, que las usaremos como variables de bash:
+</p>
+<pre class="code bash"><span class="re2">t1</span>=t1.nii.gz \\
+<span class="re2">flair</span>=flair.nii.gz \\
+<span class="re2">atlas</span>=<span class="re1">$FSLDIR</span><span class="sy0">/</span>data<span class="sy0">/</span>standard<span class="sy0">/</span>MNI152_T1_1mm.nii.gz</pre>
+
+</div>
+<!-- EDIT1 SECTION "Registro y Normalización" [1-2339] -->
+<h1 class="sectionedit2" id="registro_lineal">Registro Lineal</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT2 SECTION "Registro Lineal" [2340-2369] -->
+<h2 class="sectionedit3" id="con_flirt">Con flirt</h2>
+<div class="level2">
+
+<p>
+Para hacer que la imagen <strong>flair</strong> se <em>empalme</em> con la imagen <strong>t1</strong>:
+</p>
+<pre class="code">flirt -in $flair -ref $t1 -omat flair_to_t1.mat -out flair_to_t1.nii.gz -dof 6</pre>
+
+<p>
+El switch <code>-dof 6</code> indica el número de grados de libertad para la transformación lineal, en este caso 6 (tres rotaciones + 3 traslaciones).
+</p>
+
+<p>
+El archivo <code>flair_to_t1.mat</code> contendrá la matriz de transformación lineal necesaria para hacer que <strong>$flair</strong> se parezca a <strong>t1</strong>, mientras que el archivo <code>flair_to_t1.nii.gz</code> tendrá la imagen modificada en espacio y resolución de <strong>t1</strong>. Nota que no es necesario hacer la imagen, pues a veces nos interesa simplemente la matriz de transformación para aplicársela a otra imagen (como por ejemplo un ROI).
+</p>
+
+<p>
+Una vez que termina (tarda unos 3 min), podemos ver ambas imágenes al mismo tiempo en fslview:
+</p>
+<pre class="code">fslview $t1 flair_to_t1.nii.gz</pre>
+
+<p>
+Si vemos el contenido de flair_to_t1.mat, encontramos:
+</p>
+<pre class="code bash">$ <span class="kw2">cat</span> flair_to_t1.mat
+<span class="nu0">0.999675</span>  <span class="nu0">0.018268</span>  <span class="nu0">0.0177599</span>  -<span class="nu0">5.71865</span>
+-<span class="nu0">0.0181734</span>  <span class="nu0">0.99982</span>  -<span class="nu0">0.00547362</span>  <span class="nu0">4.97206</span>
+-<span class="nu0">0.0178567</span>  <span class="nu0">0.00514908</span>  <span class="nu0">0.999827</span>  <span class="nu0">5.25172</span>
+<span class="nu0">0</span>  <span class="nu0">0</span>  <span class="nu0">0</span>  <span class="nu0">1</span></pre>
+
+<p>
+que no es más que una <a href="http://people.bath.ac.uk/sej20/transform.html" class="urlextern" title="http://people.bath.ac.uk/sej20/transform.html"  rel="nofollow">matriz de transformación</a> de 4&times;4.
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=registration&amp;media=flair.png" class="media" title="flair.png"><img src="/dokuwiki/lib/exe/fetch.php?w=400&amp;tok=38d85a&amp;media=flair.png" class="mediacenter" alt="" width="400" /></a>
+La imagen en grises es <strong>t1</strong>, y la de colores es la <strong>flair</strong>.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Con flirt" [2370-3665] -->
+<h2 class="sectionedit4" id="con_ants">Con ANTS</h2>
+<div class="level2">
+
+<p>
+Ninguna complicación:
+</p>
+<pre class="code">antsaffine.sh 3 $t1 $flair mi_prefijo</pre>
+
+<p>
+Donde <code>miprefijo</code> es la raíz de los nombres de los archivos que se van a generar. Así, se generan dos archivos: <code>miprefijoAffine.txt</code>, que es la matriz de transformación, y <code>miprefijodeformed.nii.gz</code>, que es la imagen modificada. El formato de la matriz de transformación que genera ANTS es distinto al de fsl, pero la información es muy similar.
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Con ANTS" [3666-4110] -->
+<h1 class="sectionedit5" id="registro_no-lineal">Registro no-lineal</h1>
+<div class="level1">
+
+<p>
+Ojo: Independientemente de ANTS o de fsl, el registro no lineal tarda alrededor de una hora, así que hay que tener paciencia.
+</p>
+
+</div>
+<!-- EDIT5 SECTION "Registro no-lineal" [4111-4270] -->
+<h2 class="sectionedit6" id="con_fnirt">Con fnirt</h2>
+<div class="level2">
+
+<p>
+La manera de utilizar los argumentos en <code>fnirt</code> es distinta a <code>flirt</code>, lo cual es un poco latoso, pero nada grave. En general, en fsl cuando un switch recibe un argumento, si el switch lleva un solo guión, separamos el argumento con un espacio (como <code>-ref $t1</code>), pero si el switch lleva dos guiones, separamos el argumento con <code>=</code> y sin espacios:
+</p>
+<pre class="code bash">fnirt <span class="re5">--ref</span>=<span class="re1">$t1</span> \\
+        <span class="re5">--in</span>=<span class="re1">$flair</span> \\
+        <span class="re5">--iout</span>=nlin_flair_to_t1.nii.gz \\
+        <span class="re5">--cout</span>=nlin_flair_to_t1_coef.nii.gz</pre>
+
+<p>
+donde vemos que <code>nlin_flair_to_t1.nii.gz</code> va a ser la nueva imagen, y <code>nlin_flair_to_t1_coef.nii.gz</code> va a ser el archivo con los coeficientes del <em>warp</em> que tiene que hacerse para que <strong>$flair</strong> se parezca a <strong>$t1</strong>. En este caso en particular, el warp no será muy dramático, pues las dos imágenes son muy similares.
+</p>
+
+<p>
+Si ya nos metimos en el asunto de usar <code>fnirt</code>, entonces vale la pena una visita a <a href="http://fsl.fmrib.ox.ac.uk/fsl/fsl-4.1.9/fnirt/warp_utils.html" class="urlextern" title="http://fsl.fmrib.ox.ac.uk/fsl/fsl-4.1.9/fnirt/warp_utils.html"  rel="nofollow">esta página</a>, que incluye utilerías asociadas a <code>fnirt</code>.
+</p>
+
+</div>
+<!-- EDIT6 SECTION "Con fnirt" [4271-5337] -->
+<h2 class="sectionedit7" id="con_ants1">Con ANTS</h2>
+<div class="level2">
+
+<p>
+Muy distinta sintaxis, pero nada grave:
+</p>
+<pre class="code">antsIntroduction.sh -d 3 -i $flair -r $t1 -t SY -n 0</pre>
+
+<p>
+El switch &#039;-d 3&#039; indica que estamos trabajando en 3 dimensiones, el swith &#039;-t SY&#039; indica el tipo de transformación no lineal a hacer, y el &#039;-n 0&#039; indica que no hay que tratar de normalizar las intensidades de los pixeles en la imagen móvil. Hay mucha más información al respecto si tecleamos:
+</p>
+<pre class="code">antsIntroduction.sh -h</pre>
+
+</div>
+<!-- EDIT7 SECTION "Con ANTS" [5338-5783] -->
+<h1 class="sectionedit8" id="normalizacion">Normalización</h1>
+<div class="level1">
+
+<p>
+En realidad ya aprendimos a hacer normalización, al aprender a hacer registro, simplemente cambiaríamos la imagen <em>target</em>, que era la T1, por la del <strong>atlas</strong>. Los mismos comandos de flirt, fnirt y ANTS aplican para hacer normalización!
+</p>
+
+</div>
+<!-- EDIT8 SECTION "Normalización" [5784-6057] -->
+<h1 class="sectionedit9" id="registrar_imagenes_anatomicas_con_epi_fmri_o_dwi">Registrar imágenes anatómicas con EPI (fMRI o DWI)</h1>
+<div class="level1">
+
+<p>
+Esto no es tan trivial, mejor vámonos a una página dedicad al tema.<a href="/dokuwiki/doku.php?id=registerdwi" class="wikilink1" title="registerdwi">Haz clic aquí.</a>
+</p>
+
+</div>
+<!-- EDIT9 SECTION "Registrar imágenes anatómicas con EPI (fMRI o DWI)" [6058-] -->

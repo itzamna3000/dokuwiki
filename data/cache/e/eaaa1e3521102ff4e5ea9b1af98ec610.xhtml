@@ -1,0 +1,36 @@
+
+<h2 class="sectionedit1" id="foriteracion_de_comandos">for: iteración de comandos</h2>
+<div class="level2">
+
+<p>
+<strong>for</strong> es un comando poderoso que permite repetir un comando en varios archivos. La traducción de for sería:
+</p>
+
+<p>
+<strong>Definiendo</strong> &lt;mi_variable&gt; <strong>como</strong> &lt;mis_archivos&gt;; <strong>se debe de</strong> &lt;usar_comando&gt; &lt;mi_variable&gt;; terminado
+</p>
+
+<p>
+<strong>for</strong> var <strong>in</strong> *.*; <strong>do</strong> &lt;comando&gt; $var; done
+</p>
+
+<p>
+&lt;mi_variable&gt; puede ser cualquier letra que se quiera asignar
+</p>
+
+<p>
+En el siguiente ejemplo se imprimira en la pantalla todos los archivos dentro de una carpeta escribiendo antes la palabra “hola”
+</p>
+<pre class="code">for i in $( ls ); do; echo hola: $i; done </pre>
+<pre class="code">hola archivo1.txt
+hola archivo1.txt
+hola archivo2.txt
+hola archivo3.txt
+hola archivo4.txt</pre>
+
+<p>
+Otro ejemplo de un uso de <strong>for</strong> es el siguiente para subir al cluster la  realización de una mascara binaria con <em>bet</em>  en todos los archivos <strong>nii.gz</strong> que comienzan con <strong>t1_</strong> y tienen 4 caracteres más.
+</p>
+<pre class="code">for x in $(ls t1_????.nii.gz); do fsl_sub -N $x bet $x $x -m -n -B -f 0.35; done</pre>
+
+</div>

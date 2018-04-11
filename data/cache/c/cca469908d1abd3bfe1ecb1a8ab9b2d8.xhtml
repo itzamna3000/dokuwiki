@@ -1,0 +1,30 @@
+
+<p>
+Descomprimir imágenes y transformarlas de formato dicom a formato niifti:
+</p>
+<ol>
+<li class="level1"><div class="li"> Escribir la ruta para llegar a la carpeta en donde se encuentra el archivo</div>
+</li>
+<li class="level1"><div class="li"> Escribir el comando “tar xvf” (para archivos con formato “.tar”), o el comando unrar x (para archivos con formato “.rar”).</div>
+</li>
+<li class="level1"><div class="li"> Escribir el nombre del archivo.</div>
+</li>
+</ol>
+
+<p>
+Ejemplo: datos/purcell/circe/tesis/imágenes tar xvf sujeto8.tar
+</p>
+<ol>
+<li class="level1"><div class="li"> Dentro de la misma ruta, escribir el comando “inb_dcm2nii.sh”.</div>
+</li>
+<li class="level1"><div class="li"> Escribir el nombre del archivo que se desea transformar.</div>
+</li>
+<li class="level1"><div class="li"> Escribir el nuevo nombre que se desea asignar al archivo.</div>
+</li>
+<li class="level1"><div class="li"> Para reorientar la imagen se escribe el comando “-1 –reorientar”.</div>
+</li>
+</ol>
+
+<p>
+Ejemplo: datos/purcell/circe/tesis/imágenes inb_dcm2nii.sh  xvf sujeto8 s408
+</p>

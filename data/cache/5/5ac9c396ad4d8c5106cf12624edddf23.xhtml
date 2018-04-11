@@ -1,0 +1,45 @@
+
+<p>
+Para llevar a cabo un análisis de componentes independientes en Melodic es necesario contar con los archivos del “resting state” en formato NIfTI y las imágenes estructurales deben ser sometidas a la extracción de cerebro utilizando la herramienta <a href="/dokuwiki/doku.php?id=brain_extraction_tool_bet" class="wikilink1" title="brain_extraction_tool_bet">brain_extraction_tool_bet</a>.  
+</p>
+
+<p>
+*Es altamente recomendado que se utilcen las funciones por defecto con las que se ejecuta Melodic a menos de estar seguro que se deben alterar los parámetros*.
+</p>
+
+<p>
+En la pestaña <strong>misc</strong> podemos seleccionar si deseamos ocultar la burbuja de ayuda, asi como el reporte de progreso que se ejecuta en el explorador de internet. 
+</p>
+
+<p>
+En la pestaña de <strong>Data</strong> se introduce el numero de “entradas” y los archivos 4D del resting state. Seleccionamos también la carpeta destino para los resultados de análisis (output directory).
+Se debe seleccionar el TR utilizado para la adiquisción de las imagenes.
+Y tambien se puede seleccionar el valor para el corte del filtro paso banda para establecer el período temporal más largo que se va a permitir.
+</p>
+
+<p>
+Pestaña <strong>Pres-stats</strong>.
+Podemos desactivar la corrección de movimiento que se lleva a cabo con MCFLIRT por defecto. Asi mismo especificar el tipo de adquisicion de rebandas (slice timing correction). 
+Debido a que las imagenes estructurales utilizadas fueron sometidas a un BET esta opción debe estar activada. 
+La normaliazción de la intensidad permite elegir la misma media de intensidad para todos los volumenes.
+</p>
+
+<p>
+Pestaña <strong>Registration</strong>.
+Para el registro de las imagenes usualmente se selecciona “main structural image” donde se introducen las imagenes estructurales en el mismo orden que los archvios 4D de la pestaña <strong>Data</strong>. se pueden cambiar los grados de libertad utilzados en el registro lineal. 
+El espacio estandar corresponde al atlas utilizado en los registros. 
+</p>
+
+<p>
+Pestaña <strong>stats</strong>. Es importante seleccionar aqui el tipo de ICA que queremos realizar, éste depende del numero de sujetos a analizar y las secuencias utilizadas en la adquisición de datos. 
+</p>
+
+<p>
+Pestaña <strong>post-stats</strong>. En esta ultima sección es posible indtroducir en las secciones “time series model” y “times contrasts model” los archivos .mat y .con respectivamente, los cuales fueron creados con la herramienta <abbr title="Graphical User Interface">GUI</abbr> en la elaboración del diseño experimental. 
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=indicaciones_para_utilizar_melodic&amp;media=gui.png" class="media" title="gui.png"><img src="/dokuwiki/lib/exe/fetch.php?w=300&amp;tok=12a74f&amp;media=gui.png" class="media" title="
+" alt="
+" width="300" /></a>
+</p>

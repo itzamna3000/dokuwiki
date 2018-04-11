@@ -1,0 +1,11 @@
+fnirt <span class="re5">-v</span> \
+  <span class="re5">--in</span>=<span class="co1">${tmpDir}</span><span class="sy0">/</span>Fast_t1_pve_0 \
+  <span class="re5">--ref</span>=<span class="re1">$adc</span> \
+  <span class="re5">--fout</span>=field \
+  <span class="re5">--aff</span>=lin.mat
+&nbsp;
+applywarp <span class="re5">-v</span> \
+  <span class="re5">-i</span> <span class="re1">$t1</span> \
+  <span class="re5">-o</span> t1_to_dwi \
+  <span class="re5">-r</span> <span class="re1">$adc</span> \
+  <span class="re5">-w</span> field 

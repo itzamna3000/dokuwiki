@@ -1,0 +1,139 @@
+
+<h1 class="sectionedit1" id="procesamiento_de_imagenes_pesadas_a_difusion">Procesamiento de Imágenes Pesadas a Difusión</h1>
+<div class="level1">
+
+<p>
+Procesar datos de imágenes de difusión es bastante complicado, y hay muchos aspectos qué vigilar para lograr obtener un análisis optimo. En esta página se describen algunas técnicas.
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Procesamiento de Imágenes Pesadas a Difusión" [1-251] -->
+<h1 class="sectionedit2" id="pre-procesamiento_de_datos">Pre-procesamiento de datos</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT2 SECTION "Pre-procesamiento de datos" [252-292] -->
+<h2 class="sectionedit3" id="conversion_de_directorios_dicom_a_imagenes_nifti">Conversion de directorios DICOM a imágenes Nifti</h2>
+<div class="level2">
+
+<p>
+Para convertir datos de <strong>Dicom a Nifti</strong> utilizamos el comando:<br/>
+<br/>
+
+<code>inb_dcm2nii.sh</code> DICOMdir mi_archivo.<br/>
+<br/>
+
+Esto nos entregará tres archivos:<br/>
+mi_archivo<code>.nii</code><br/>
+mi_archivo<code>.bval</code><br/>
+mi_archivo<code>.bvec</code>.
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Conversion de directorios DICOM a imágenes Nifti" [293-572] -->
+<h2 class="sectionedit4" id="conversion_de_par_rec_a_nifti">Conversión de PAR/REC a Nifti</h2>
+<div class="level2">
+
+<p>
+Se utiliza el comando: <code>PARconv_v1.12.sh</code>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Conversión de PAR/REC a Nifti" [573-658] -->
+<h2 class="sectionedit5" id="correccion_de_inhomogeneidades_del_campo_magnetico">Corrección de inhomogeneidades del campo magnético</h2>
+<div class="level2">
+
+<p>
+Lo que conviene ahora es corregir los errores de movimiento y los artefactos inducidos por corrientes eddy <a href="http://es.wikipedia.org/wiki/Corriente_de_Foucault" class="urlextern" title="http://es.wikipedia.org/wiki/Corriente_de_Foucault"  rel="nofollow">(de Foucault)</a>. Existen dos versiones, la clásica es con:<br/>
+<br/>
+
+<code>eddy_correct_rotbvecs.sh</code>
+</p>
+
+<p>
+Este método es anticuado y sub-óptimo, pero lo único que se puede hacer en caso de no contar con imágenes con adquisición reversa de fase. En caso de contar con ellas, entonces utilizar esta opción: <a href="/dokuwiki/doku.php?id=eddy_correct_revpe" class="wikilink1" title="eddy_correct_revpe">TOPUP</a>.
+</p>
+
+</div>
+<!-- EDIT5 SECTION "Corrección de inhomogeneidades del campo magnético" [659-1213] -->
+<h2 class="sectionedit6" id="reacomodo_de_la_tabla_de_gradientes_para_la_compatibilidad_de_mrtrix">Reacomodo de la tabla de gradientes para la compatibilidad de mrtrix</h2>
+<div class="level2">
+
+<p>
+Si queremos usar mrtrix debemos cambiar el formato de la tabla de gradientes a como le gusta a mrtrix. Para ello usamos:<br/>
+
+</p>
+
+<p>
+<code>inb_mrtrix_nii2mif.sh</code><br/>
+
+</p>
+
+<p>
+El formato preferido de mrtrix es <code>.mif</code>, pero es perfectamente feliz leyendo <code>.nii</code> y <code>.nii.gz</code>, así que por comodidad utilizamos estos últimos. Esto quiere decir que no vamos a generar ningún archivo <code>.mif</code>, pero sí nuestra tabla de gradientes. Entonces vamos a engañar un poco al script para que no genere el archivo <code>. mif</code>, utilizando la opción <code>-onlyGrads</code>. Por ejemplo:
+</p>
+
+<p>
+<code>inb_mrtrix_nii2mif.sh dwi_ec.nii.gz dwi_ec.mif dwi.bvec dwi.bval -flip_y -flip_z -onlyGrads</code>
+</p>
+
+<p>
+Esto generará el archivo <code>dwi_ec_encoding.b</code> en el cual el sentido de los componentes  <em>y</em> y <em>z</em> de los gradientes están invertidos. Esto se requiere por el cambio de formato, y es dependiente de cada protocolo de imagen. Para saber qué componentes hay que invertir se hace por ensayo y error.<br/>
+
+</p>
+
+<p>
+La información detallada de como <a href="/dokuwiki/doku.php?id=vectores" class="wikilink1" title="vectores">corregir los vectores</a> en este enlace.
+</p>
+
+</div>
+<!-- EDIT6 SECTION "Reacomodo de la tabla de gradientes para la compatibilidad de mrtrix" [1214-2333] -->
+<h1 class="sectionedit7" id="ahora_si_estamos_listos_para_generar_algunos_mapas_cuantitativos">¡¡¡Ahora sí estamos listos para generar algunos mapas cuantitativos!!!</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT7 SECTION "¡¡¡Ahora sí estamos listos para generar algunos mapas cuantitativos!!!" [2334-2421] -->
+<h1 class="sectionedit8" id="proceso_basico_con_mrtrix_2">Proceso básico con MRtrix 2</h1>
+<div class="level1">
+
+<p>
+La manera correcta de hacer las cosas es aprender comando por comando, lo cual está sumamente bien descrito en <a href="http://example.com" class="urlextern" title="http://example.com"  rel="nofollow">esta página</a>. Sin embargo, para ahorrarnos muchas teclas, tenemos un script que encapsula la mayoría de esos pasos:
+</p>
+
+<p>
+<code>inb_mrtrix_proc.sh</code>
+</p>
+
+</div>
+<!-- EDIT8 SECTION "Proceso básico con MRtrix 2" [2422-2741] -->
+<h1 class="sectionedit9" id="proceso_con_mrtrix_3">Proceso con MRtrix 3</h1>
+<div class="level1">
+
+<p>
+Esto amerita su propia página, que está por <a href="/dokuwiki/doku.php?id=mrtrix3" class="wikilink1" title="mrtrix3">acá</a>. 
+</p>
+
+<p>
+Los comandos básicos de mrtrix2 y mrtrix3 cambiaron de nombre (según ésto para hacer más coherente toda la nomenclatura de mrtrix3). Esto puede causar confusión, la cual se resuelve fácilmente consultando la <a href="https://github.com/jdtournier/mrtrix3/wiki/MRtrix-0.2-equivalent-commands" class="urlextern" title="https://github.com/jdtournier/mrtrix3/wiki/MRtrix-0.2-equivalent-commands"  rel="nofollow">tabla de equivalencias entre mrtrix2 y mrtrix3</a>, que amablemente hicieron los que escriben mrtrix.
+</p>
+
+</div>
+<!-- EDIT9 SECTION "Proceso con MRtrix 3" [2742-3233] -->
+<h1 class="sectionedit10" id="tractografia">Tractografía</h1>
+<div class="level1">
+
+<p>
+Para comenzar a hacer la tractografía se necesita primero delimitar una región de interés (ROI) de donde partiran los <em>streamlines</em> (lineas de corriente de difusion). Para esto hay que segmentar adecuadamente el area deseada pudiendo realizarlo en el visor de Mrtrix (mrview), Freesurfer (freeview) o FSL (fslview). Esa area se le denomina comunmente “semilla”, dado que de aquí partirán todos los analisis futuros.
+</p>
+
+<p>
+Link para realizar ROIs en mrview: <a href="http://www.brain.org.au/software/mrtrix/tractography/roi.html" class="urlextern" title="http://www.brain.org.au/software/mrtrix/tractography/roi.html"  rel="nofollow">http://www.brain.org.au/software/mrtrix/tractography/roi.html</a>.
+</p>
+
+<p>
+Una vez que ya este bien delimitada el area se procede a “sembrar la semilla” con los comandos streamtrack y tckgen (en mrtrix2 y mrtrix 3 respectivamente).
+Ahora si tenemos nuestro primer resultado de la tractografía!!! sin embargo no siempre es lo que esperamos, ya que queda un poco llena de muchas otras fibras que no son de nuestro interés para esto se procede a realizar una disección virtual o un filtrado con los comandos select_tracts o tckedit (mrtrix2 y 3 respectivamente) para incluir o excluir otras regiones de acuerdo a la anatomía que deseemos observar (previamente al filtrado se tienen que dibujar los ROIs que serán utilizados para incluir o excluir areas). 
+</p>
+
+</div>
+<!-- EDIT10 SECTION "Tractografía" [3234-] -->

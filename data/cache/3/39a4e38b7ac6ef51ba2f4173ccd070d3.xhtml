@@ -1,0 +1,53 @@
+
+<h1 class="sectionedit1" id="trucos_de_luis_concha">Trucos de Luis Concha</h1>
+<div class="level1">
+
+<p>
+Algunos trucos de cosas truculentas, y otras muy bobas pero que me tardé en entender cómo hacerlas.
+</p>
+
+<p>
+Lo que hago mas frecuentemente es un for loop, que directamente en la terminal debe usar punto y coma en sustitución de un script formal en donde se hace una nueva línea. Por ejemplo:
+</p>
+
+<p>
+<code>for sujeto in 301 302 303
+do
+  echo “trabajando en sujeto $sujeto”
+done</code>
+</p>
+
+<p>
+en la terminal quedaría:
+</p>
+
+<p>
+<code>for sujeto in 301 302 303; do echo “trabajando en sujeto $sujeto”; done</code>
+</p>
+
+<p>
+Nótese la ausencia de punto y coma entre do y echo.
+</p>
+
+<p>
+En caso de tener organizados a los sujetos cada uno con una carpeta, y con identiricadores claros, como en el caso de freesurfer, es muy fácil hacer algo repetitivo:
+</p>
+
+<p>
+<code>for sujeto in 3??; do recon-all -all -subjid $sujeto;done
+</code>
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Trucos de Luis Concha" [1-794] -->
+<h1 class="sectionedit2" id="poner_resultados_feat_en_freesurfer">Poner resultados FEAT en Freesurfer</h1>
+<div class="level1">
+
+<p>
+Por ejemplo, para visualizar unos resultados funcionales sobre superficies. 
+Funciona a nivel sujeto y a nivel grupo.
+Ir a esta <a href="/dokuwiki/doku.php?id=feat2fs" class="wikilink1" title="feat2fs">página</a>.
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Poner resultados FEAT en Freesurfer" [795-] -->

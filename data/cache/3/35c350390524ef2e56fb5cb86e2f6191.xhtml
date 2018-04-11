@@ -1,0 +1,69 @@
+
+<h2 class="sectionedit1" id="operaciones_arimeticas_con_variables_de_coma_flotante">Operaciones ariméticas con variables de coma flotante</h2>
+<div class="level2">
+
+<p>
+awk “BEGIN {print $ul_mean+(2*$ul_st); exit}”
+</p>
+
+<p>
+uthr=$(awk “BEGIN {print $ul_mean+(2*$ul_st); exit}”)
+</p>
+
+<p>
+awk &#039;{ $1 = $2 + $3 / $4; print }&#039; inventory-shipped
+</p>
+
+<p>
+The arithmetic operators in awk are:
+</p>
+
+<p>
+x + y
+</p>
+<pre class="code">  Addition. </pre>
+
+<p>
+x - y
+</p>
+<pre class="code">  Subtraction. </pre>
+
+<p>
+- x
+</p>
+<pre class="code">  Negation. </pre>
+
+<p>
++ x
+</p>
+<pre class="code">  Unary plus. No real effect on the expression. </pre>
+
+<p>
+x * y
+</p>
+<pre class="code">  Multiplication. </pre>
+
+<p>
+x / y
+</p>
+<pre class="code">  Division. Since all numbers in awk are double-precision floating point, the result is not rounded to an integer: 3 / 4 has the value 0.75. </pre>
+
+<p>
+x % y
+</p>
+<pre class="code">  Remainder. The quotient is rounded toward zero to an integer, multiplied by y and this result is subtracted from x. This operation is sometimes known as &quot;trunc-mod.&quot; The following relation always holds:</pre>
+<pre class="code">  b * int(a / b) + (a % b) == a</pre>
+<pre class="code">  One possibly undesirable effect of this definition of remainder is that x % y is negative if x is negative. Thus,</pre>
+<ol>
+<li class="level1"><div class="li">17 % 8 = -1</div>
+</li>
+</ol>
+<pre class="code">  In other awk implementations, the signedness of the remainder may be machine dependent. </pre>
+
+<p>
+x ^ y
+x <strong> y
+    Exponentiation: x raised to the y power. 2 ^ 3 has the value 8. The character sequence `</strong>&#039; is equivalent to `^&#039;. (The POSIX standard only specifies the use of `^&#039; for exponentiation.) 
+</p>
+
+</div>

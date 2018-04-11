@@ -1,0 +1,29 @@
+
+<h1 class="sectionedit1" id="para_visualizar_de_manera_normal_las_imagenes_tanto_funcionales_como_estructurales">Para visualizar de manera &quot;normal&quot; las imágenes (tanto funcionales como estructurales)</h1>
+<div class="level1">
+
+<p>
+Hay veces en las que al abrir una imagene en FslView se observa con una orientación diferente a la que estamos acostumbrados. En la mayoría de los casos sólo es la visualización la que no está bien, lo cual no interfiere con los análisis que se realicen con las imágenes. 
+</p>
+
+<p>
+Lo primero que hay que hacer es verificar si las etiquetas que pone FslView son correctas. Es decir, aunque la imagen esté rotada, ver si ésta conserve sus etiquetas corrrectas (e.g., lo superior lo marca como superior aunque se observe en la parte izquierda). Para evitar esta “incomodidad” se recomienda agregar -reorientar al final del comando para transformar a nifti las imágenes.
+</p>
+
+<p>
+inb_dcm2nii.sh Input Output <strong>-reorientar</strong>
+</p>
+
+<p>
+Si no se soluciona el problema, puede intentarse con el comando fslreorient2std. Este comando asume que la imagen tiene información válida sobre la orientación (que las etiquetas son correctas). Esta no es una herramienta de registro, solamente rota la imagen para mostrarla similar a la imagen estándar.
+</p>
+
+<p>
+fslreorient2std Input Output 
+</p>
+
+<p>
+Si tu imagen no tiene las etiquetas correctas se considera un problema grave; en la mayoría de los casos relacionados con el header. Para solucionar ese tipo de problemas más específicos, aquí hay información: <a href="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Orientation%20Explained" class="urlextern" title="http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Orientation%20Explained"  rel="nofollow">http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Orientation%20Explained</a>
+</p>
+
+</div>

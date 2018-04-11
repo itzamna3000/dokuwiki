@@ -1,0 +1,82 @@
+
+<p>
+Registrar dos imágenes distintas es muy fácil cuando son del mismo sujeto y tienen el mismo contraste; si son de diferentes sujetos, todas del mismo contraste, pero las queremos llevar a un espacio estándar, estamos hablando de normalización, y como puede verse <a href="/dokuwiki/doku.php?id=registration" class="wikilink1" title="registration">aquí</a>, eso tampoco es difícil. El siguiente paso de complejidad es registrar dos imágenes del mismo sujeto pero con contrastes distintos (p.ej. una T1 con una T2). Habitualmente eso lo logramos utilizando una función de costo apropiada, como <em>mutual information</em>. Pero hay un caso muy difícil, aunque se trate de imágenes del mismo sujeto, que es cuando existen inhomogeneidades geométricas distintas entre las dos imágenes a registrar. Estas inhomogeneidades geométricas son, desgraciadamente, la norma en imágenes eco-planares (EPI) como las de contraste BOLD y las DWI, mientras que las imágenes T1 (SPGRE, por ejemplo), son inmunes a estos problemas. 
+</p>
+
+<p>
+Por ejemplo si hacemos un registro lineal con flirt entre la T1 hacia un mapa de ADC, vemos que la parte mas anterior del cuerpo calloso de la T1 (rojos) está más anterior que la del mapa del ADC (grises):
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=registerdwi&amp;media=selection_029.png" class="media" title="selection_029.png"><img src="/dokuwiki/lib/exe/fetch.php?w=300&amp;tok=4f89d5&amp;media=selection_029.png" class="mediacenter" alt="" width="300" /></a>
+</p>
+
+<p>
+En esta página vamos a describir una estrategia para lograr el registro entre estas imágenes. Es importante hacer una aclaración: Es prácticamente imposible hacer un registro perfecto entre  imágenes T1 y EPI (algo que es casi garantizado, por ejemplo, entre T1 y T2). Esto es solo una estrategia que ha funcionado moderadamente bien, pero tiene mucho qué mejorar aún. 
+</p>
+
+<p>
+La estrategia es utilizar mapas de volumen parcial de el LCR derivados de FAST de las imágenes T1, y vamos a registrar eso contra el mapa de ADC derivado de las imágenes DWI.
+</p>
+
+<p>
+Para este ejemplo, vamos a asumir algunas cosas:
+<strong>$t1</strong> es mi imagen pesada a T1 (a la que ya le hicimos <a href="/dokuwiki/doku.php?id=brain_extraction_tool_bet" class="wikilink1" title="brain_extraction_tool_bet">bet</a>)
+,
+<strong>$adc</strong>  es mi mapa de ADC derivado de mis DWIs (habiendo usado bet). 
+</p>
+<pre class="code bash"> fast <span class="re5">-v</span> <span class="re5">-S</span> <span class="nu0">1</span> <span class="re5">-n</span> <span class="nu0">3</span> <span class="re5">-t</span> <span class="nu0">1</span> <span class="re5">-I</span> <span class="nu0">1</span> <span class="re5">-g</span> <span class="re5">-N</span> \
+  <span class="re5">-o</span> Fast_t1 \
+  <span class="re1">$t1</span> </pre>
+
+<p>
+Ahora haremos un primer registro entre la estimación del LCR de las imágenes T1 con el mapa de ADC. Ojo, la imagen fija es el ADC.
+</p>
+<pre class="code bash">flirt \
+  <span class="re5">-in</span> Fast_t1_pve_0 \
+  <span class="re5">-ref</span> <span class="re1">$adc</span> \
+  <span class="re5">-omat</span> lin.mat \
+  <span class="re5">-out</span> lin_csf2adc_transformed </pre>
+
+<p>
+Excelente, ahora vamos a afinar este registro entre imágenes utilizando un registro no lineal:
+</p>
+<pre class="code bash">fnirt <span class="re5">-v</span> \
+  <span class="re5">--in</span>=Fast_t1_pve_0 \
+  <span class="re5">--ref</span>=<span class="re1">$adc</span> \
+  <span class="re5">--fout</span>=field \
+  <span class="re5">--aff</span>=lin.mat
+&nbsp;
+applywarp <span class="re5">-v</span> \
+  <span class="re5">-i</span> <span class="re1">$t1</span> \
+  <span class="re5">-o</span> t1_to_dwi \
+  <span class="re5">-r</span> <span class="re1">$adc</span> \
+  <span class="re5">-w</span> field </pre>
+
+<p>
+Ahora, si vemos cómo se ve la imagen T1 (rojos) registrada no-linealmente con el mapa de ADC como referencia (gris), vemos que el cuerpo calloso encaja mucho mejor:
+</p>
+
+<p>
+<a href="/dokuwiki/lib/exe/detail.php?id=registerdwi&amp;media=selection_030.png" class="media" title="selection_030.png"><img src="/dokuwiki/lib/exe/fetch.php?w=300&amp;tok=b7adfe&amp;media=selection_030.png" class="mediacenter" alt="" width="300" /></a>
+</p>
+
+<p>
+Dado que esta es una operación que se realiza frecuentemente, existe un escript en el laboratorio para automatizar la tarea:
+</p>
+<pre class="code">inb_register_t1_to_dwi_via_csf.sh
+ 
+inb_register_t1_to_dwi_via_csf.sh &lt;t1&gt; &lt;adc&gt; &lt;outbase&gt; [Options]
+ 
+Note that t1 and adc must be skull-stripped
+
+
+Options
+
+  -keep_tmp
+  -tmpDir &lt;/some/folder&gt;
+
+ 
+ LU15 (0N(H4
+ INB, Feb 2015.
+ lconcha@unam.mx</pre>

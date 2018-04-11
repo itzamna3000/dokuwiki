@@ -1,0 +1,41 @@
+
+<h3 class="sectionedit3" id="cambio_de_version_de_fsl">Cambio de versión de <abbr title="FMRIB Software Library">FSL</abbr></h3>
+
+<p>Para cambiar una versión de <abbr title="FMRIB Software Library">FSL</abbr> se pueden usar alias dentro de una terminal en nuestra sesión.</p>
+
+<p>La combinación de teclas para el acceso directo a la terminal es:</p>
+
+<pre><code>Ctrl+Alt+t
+</code></pre>
+
+<p>Esto abre una ventana en nuestra sesión gráfica actual. En ella esta definido por default <abbr title="FMRIB Software Library">FSL</abbr> 4. Para cambiar a <abbr title="FMRIB Software Library">FSL</abbr> 5 el alias a usar es:</p>
+
+<pre><code>fsl5
+</code></pre>
+
+<p>A su vez para regresar a que <abbr title="FMRIB Software Library">FSL</abbr> 4 se usa:</p>
+
+<pre><code>fsl4
+</code></pre>
+
+<h3 class="sectionedit3" id="cambiar_a_fsl_5_por_default">Cambiar a <abbr title="FMRIB Software Library">FSL</abbr> 5 por default</h3>
+
+<p>Si lo que deseamos es mantener <abbr title="FMRIB Software Library">FSL</abbr> 5 como la versión determinada, necesitamos modificar el archivo <strong>.bashrc</strong> este es el archivo que maneja nuestras configuraciones. Podemos modificarlo con</p>
+
+<pre><code>gedit ~/.bahsrc
+</code></pre>
+
+<p>A este archivo es necesario agregar al final</p>
+
+<pre><code>export FSL5_SETUP_FILE=/home/inb/lconcha/fmrilab_software/tools/setup_fsl5
+source $FSL5_SETUP_FILE
+</code></pre>
+
+<p>Así cada vez que iniciemos sesión el <abbr title="FMRIB Software Library">FSL</abbr> predeterminado será el <strong><abbr title="FMRIB Software Library">FSL</abbr> 5</strong>.</p>
+
+<h3 class="sectionedit3" id="correr_trabajo_localmente">Correr trabajo localmente</h3>
+
+<p>En el caso que se necesite correr un trabajo fuera del cluster, es necesario quitar la variable <strong>FSLPARALLEL</strong> esto funciona en la terminal donde se deshabilita y es ahí donde el comando <strong>fsl</strong> se debe utilizar.</p>
+
+<pre><code> unset FSLPARALLEL
+</code></pre></html>

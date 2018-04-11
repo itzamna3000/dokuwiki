@@ -1,0 +1,4 @@
+fnirt <span class="re5">--ref</span>=<span class="re1">$t1</span> \\
+        <span class="re5">--in</span>=<span class="re1">$flair</span> \\
+        <span class="re5">--iout</span>=nlin_flair_to_t1.nii.gz \\
+        <span class="re5">--cout</span>=nlin_flair_to_t1_coef.nii.gz
